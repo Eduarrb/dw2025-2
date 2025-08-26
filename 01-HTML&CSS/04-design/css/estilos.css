@@ -29,6 +29,20 @@ body {
     display: inline-block;
     background-color: #4098ea;
     border-radius: 10px;
+    /* transition: background-color 0.3s; */
+    /* transition: transform 0.3s; */
+    transition: all .3s;
+    &:hover {
+        background-color: #094e90;
+        /* transition: background-color 0.3s; */
+        transform: scale(1.05);
+        /* transition: transform 0.3s; */
+        transition: all 0.3s;
+    }
+}
+
+.titulo-n2 {
+    color: white;
 }
 
 /* NAV */
@@ -85,11 +99,30 @@ header {
             h1 {
                 color: white;
                 margin-bottom: 20px;
+                font-size: 52px;
             }
 
             p {
                 color: rgba(255,255,255, .7);
                 margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+/* Proyectos */
+.proyectos {
+    div {
+        article {
+            display: flex;
+            aside {
+                width: 50%;
+                img {
+                    width: 100%;
+                }
+                h3, p {
+                    color: white;
+                }
             }
         }
     }
