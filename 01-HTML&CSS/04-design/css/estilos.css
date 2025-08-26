@@ -29,14 +29,10 @@ body {
     display: inline-block;
     background-color: #4098ea;
     border-radius: 10px;
-    /* transition: background-color 0.3s; */
-    /* transition: transform 0.3s; */
     transition: all .3s;
     &:hover {
         background-color: #094e90;
-        /* transition: background-color 0.3s; */
         transform: scale(1.05);
-        /* transition: transform 0.3s; */
         transition: all 0.3s;
     }
 }
@@ -58,10 +54,6 @@ nav {
             color: white;
             padding: 10px 20px;
             display: inline-block;
-            /* &:last-child {
-                background-color: #4098ea;
-                border-radius: 10px;
-            } */
         }
     }
 }
@@ -89,7 +81,6 @@ header {
             height: 100%;
             object-fit: cover;
             opacity: .5;
-            /* border-radius: 20px; */
         }
         div {
             position: absolute;
@@ -112,16 +103,29 @@ header {
 
 /* Proyectos */
 .proyectos {
+    padding: 30px 0;
     div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
         article {
             display: flex;
+            column-gap: 20px;
             aside {
                 width: 50%;
                 img {
                     width: 100%;
+                    border-radius: 10px;
                 }
-                h3, p {
+                h3 {
                     color: white;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    color: #7f9bb6;
+                    line-height: 1.9;
+                    margin-bottom: 30px; 
                 }
             }
         }
