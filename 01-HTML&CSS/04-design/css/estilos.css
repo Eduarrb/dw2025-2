@@ -30,6 +30,8 @@ body {
     background-color: #4098ea;
     border-radius: 10px;
     transition: all .3s;
+    border: none;
+    cursor: pointer;
     &:hover {
         background-color: #094e90;
         transform: scale(1.05);
@@ -55,6 +57,9 @@ nav {
             padding: 10px 20px;
             display: inline-block;
         }
+    }
+    .menu-icon {
+        display: none;
     }
 }
 
@@ -116,6 +121,8 @@ header {
                 img {
                     width: 100%;
                     border-radius: 10px;
+                    height: 100%;
+                    object-fit: cover;
                 }
                 h3 {
                     color: white;
@@ -140,6 +147,7 @@ header {
             color: white;
             line-height: 1.9;
             margin-top: 30px;
+            text-align: justify;
         }
     }
 }
@@ -153,6 +161,7 @@ header {
         }
         div {
             display: flex;
+            flex-wrap: wrap;
             gap: 20px;
             span {
                 display: inline-block;
@@ -169,18 +178,118 @@ header {
 .contacto {
     padding: 30px 0;
     div {
+        h2 {
+            margin-bottom: 30px;
+        }
         form {
-            width: 30%;
+            width: 35%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             label {
                 color: white;
+                margin-bottom: 10px;
             }
-            input:not(:last-child) {
-                width: 100%;
-            }
+            input:not(:last-child),
             textarea {
+                width: 100%;
+                background-color: #182634;
+                font-size: 16px;
+                padding: 10px;
+                border: 1px solid #12406b;
+                border-radius: 5px;
+                outline: 0;
+                margin-bottom: 20px;
+                color: white;
+                display: inline-block;
+                box-sizing: border-box;
+                &::placeholder {
+                    color: #6d92b5;
+                    font-size: 16px;
+                    font-family: "Noto Sans", sans-serif;
+                }
+            }
+        }
+    }
+}
+
+/* footer */
+
+footer {
+    /* 
+        1. flex 
+        2. flex-direction
+        3. segun el eje centrar
+        4. estilos restantes del diseño original
+    */
+}
+
+@media only screen and (max-width: 920px) {
+    nav {
+        .menu {
+            display: none;
+        }
+        .menu-icon {
+            display: block;
+            font-size: 18px;
+        }
+    }
+
+    header {
+        .imgContenedor {
+            div {
+                h1 {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+
+    .proyectos {
+        div {
+            article {
+                flex-wrap: wrap;
+                aside {
+                    width: 100%;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .contacto {
+        div {
+            form {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    html {
+        font-size: 14px;
+    }
+    .contenedor {
+        width: 90%;
+    }
+    .titulo-n2 {
+        font-size: 18px;
+    }
+    header {
+        .imgContenedor {
+            div {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    .contacto {
+        div {
+            form {
                 width: 100%;
             }
         }
