@@ -1,0 +1,11 @@
+.nav {
+    background-color: #1D2739;
+    &__contenedor {
+        &__logo {
+            background-color: #24CBEE;
+            &__iconBox {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
