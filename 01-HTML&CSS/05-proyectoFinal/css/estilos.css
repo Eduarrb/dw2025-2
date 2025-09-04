@@ -195,6 +195,8 @@ a, span {
 
 .nav {
   background-color: #1D2739;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .nav__contenedor {
   display: flex;
@@ -254,8 +256,28 @@ a, span {
   background-color: #194558;
   color: #23CEEE;
 }
+.nav__contenedor__user {
+  display: flex;
+  align-items: center;
+}
+.nav__contenedor__user__userData {
+  display: flex;
+  flex-direction: column;
+}
+.nav__contenedor__user__userData span:nth-child(1) {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.nav__contenedor__user__userData span:last-child {
+  color: #7E8CA0;
+  font-size: 1.2rem;
+  text-align: right;
+}
 .nav__contenedor__user__sesion svg {
-  width: 1.6rem;
+  width: 1.8rem;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /*# sourceMappingURL=estilos.css.map */
