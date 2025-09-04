@@ -30,6 +30,11 @@ a, span {
   margin-right: auto;
 }
 
+.title-n3 {
+  font-size: 2.3rem;
+  color: white;
+}
+
 .mt-1 {
   margin-top: 1rem;
 }
@@ -226,7 +231,7 @@ a, span {
   flex-direction: column;
 }
 .nav__contenedor__logo__text--marca {
-  color: #23CEEE;
+  color: #24CBEE;
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -278,6 +283,54 @@ a, span {
 .nav__contenedor__user__sesion svg {
   width: 1.8rem;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.header {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.header__contenedor {
+  text-align: center;
+}
+.header__contenedor--title {
+  color: #24CBEE;
+  font-size: 6.2rem;
+}
+.header__contenedor--descri {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #7E8CA0;
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+}
+
+.filtros {
+  width: 30%;
+  border: 1px solid rgba(199, 210, 221, 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.filtros__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filtros__head--title {
+  display: flex;
+  align-items: center;
+}
+.filtros__head--title svg {
+  width: 3rem;
+  color: #24CBEE;
+  margin-right: 1rem;
+}
+.filtros__head--canti {
+  color: #C7D2DD;
+  background-color: rgba(126, 140, 160, 0.3);
+  font-size: 1.4rem;
+  padding: 0.3rem 1.2rem;
+  border-radius: 1rem;
 }
 
 /*# sourceMappingURL=estilos.css.map */

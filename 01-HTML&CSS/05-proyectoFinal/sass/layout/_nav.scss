@@ -1,3 +1,5 @@
+@use '../base/variables' as v;
+
 .nav {
     background-color: #1D2739;
     padding-top: 1rem;
@@ -10,7 +12,7 @@
             display: flex;
             align-items: center;
             &__iconBox {
-                background-color: #24CBEE;
+                background-color: v.$primary;
                 font-size: 2rem;
                 color: white;
                 padding: .5rem;
@@ -27,7 +29,7 @@
                 display: flex;
                 flex-direction: column;
                 &--marca {
-                    color: #23CEEE;
+                    color: v.$primary;
                     font-size: 1.8rem;
                     font-weight: 600;
                     margin-bottom: .5rem;
@@ -85,7 +87,6 @@
                 svg {
                     width: 1.8rem;
                     color: rgba(#fff, .6);
-                    // rbga(255,255,255,0.6)
                 }
             }
         }
