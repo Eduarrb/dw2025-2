@@ -1,0 +1,21 @@
+@use '../base/variables' as v;
+
+.header {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    &__contenedor {
+        text-align: center;
+        &--title {
+            color: v.$primary;
+            font-size: 6.2rem;
+        }
+        &--descri {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            color: v.$gray;
+            font-size: 2.2rem;
+            line-height: 3.2rem;
+        }
+    }
+}
