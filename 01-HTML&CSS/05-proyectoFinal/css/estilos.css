@@ -1,4 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+/*
+    BREAKPOINTS EM
+
+    article {
+        font-size: 22px;
+        span {
+            width: 1em; = 22px
+        }
+    }
+
+    html => 16px
+    1em = 16px
+
+    1200PX / 16PX =  75em
+    992PX / 16PX = 62em
+    768PX / 16PX = 48em
+    576PX / 16PX = 36em
+    420PX / 16PX = 26.25em
+    380PX / 16PX = 23.75em
+*/
 *,
 *::after,
 *::before {
@@ -28,6 +48,11 @@ a, span {
   max-width: 120rem;
   margin-left: auto;
   margin-right: auto;
+}
+@media only screen and (max-width: 75em) {
+  .contenedor {
+    max-width: 96rem;
+  }
 }
 
 .title-n2 {
@@ -69,6 +94,22 @@ a, span {
 }
 .destacado i {
   margin-right: 0.5rem;
+}
+
+.btn {
+  font-size: 1.4rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.btn-verde {
+  background-color: #196541;
+  color: #8E939C;
+}
+
+.btn-celeste {
+  background-color: #24CBEE;
+  color: #ffffff;
 }
 
 .gap-1 {
@@ -547,6 +588,11 @@ a, span {
   border-radius: 1rem;
   padding: 2rem;
 }
+@media only screen and (max-width: 75em) {
+  .filtros {
+    width: calc(40% - 1.5rem);
+  }
+}
 .filtros__head {
   display: flex;
   justify-content: space-between;
@@ -631,11 +677,21 @@ a, span {
 .products {
   width: calc(70% - 1.5rem);
 }
+@media only screen and (max-width: 75em) {
+  .products {
+    width: calc(60% - 1.5rem);
+  }
+}
 .products__item {
   width: calc(33.3333333333% - 1.3333333333rem);
   border: 1px solid #475569;
   border-radius: 1rem;
   overflow: hidden;
+}
+@media only screen and (max-width: 75em) {
+  .products__item {
+    width: calc(50% - 2rem);
+  }
 }
 .products__item__imgBox {
   width: 100%;
@@ -651,6 +707,45 @@ a, span {
   position: absolute;
   right: 1.5rem;
   top: 1.5rem;
+}
+.products__item__info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+.products__item__info span {
+  padding: 0.2rem 0.8rem;
+  border-radius: 1rem;
+}
+.products__item__info span:first-child {
+  background-color: #334155;
+  color: #24CBEE;
+}
+.products__item__info span:last-child {
+  color: #C7D2DD;
+  border: 1px solid #475569;
+}
+.products__item__descri {
+  font-size: 1.3rem;
+  color: #7E8CA0;
+}
+.products__item__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.products__item__actions__box {
+  display: flex;
+  flex-direction: column;
+}
+.products__item__actions__box--price {
+  color: #24CBEE;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.products__item__actions__box--stock {
+  color: #334155;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=estilos.css.map */

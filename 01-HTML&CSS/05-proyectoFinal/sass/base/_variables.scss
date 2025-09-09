@@ -6,3 +6,34 @@ $bg-primary: #1D2739;
 $bg-secondary: #334155;
 $border-color: #475569;
 $destacado: #EBAD0A;
+$light-green: #196541;
+$texto-opaco: #8E939C;
+
+/*
+    BREAKPOINTS EM
+
+    article {
+        font-size: 22px;
+        span {
+            width: 1em; = 22px
+        }
+    }
+
+    html => 16px
+    1em = 16px
+
+    1200PX / 16PX =  75em
+    992PX / 16PX = 62em
+    768PX / 16PX = 48em
+    576PX / 16PX = 36em
+    420PX / 16PX = 26.25em
+    380PX / 16PX = 23.75em
+*/
+
+$bp-extraLarge: 75em;
+$bp-large: 62em;
+$bp-medium: 48em;
+$bp-small: 36em;
+$bp-extraSmall: 26.25em;
+$bp-micro: 23.75em;
+
