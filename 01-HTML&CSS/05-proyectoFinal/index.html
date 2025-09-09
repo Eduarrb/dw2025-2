@@ -66,7 +66,7 @@
     </header>
 
     <main class="main">
-        <div class="main__contenedor contenedor">
+        <div class="main__contenedor contenedor d-flex gap-3 align-start">
             <!-- MODULOS INTERNOS -->
             <aside class="filtros">
                 <div class="filtros__head">
@@ -116,22 +116,35 @@
                     </article>
                 </div>
             </aside>
-            <section class="products">
+            <section class="products d-flex gap-2">
                 <article class="products__item">
                     <div class="products__item__imgBox">
                         <img src="img/amd.webp" alt="Amd">
-                        <span class="products__item__imgBox--destacado">
+                        <span class="products__item__imgBox--destacado destacado">
                             <i class="fa-regular fa-star"></i> Destacado
                         </span>
                     </div>
-                    <div class="products__item__info">
+                    <div class="products__item__info mt-2 pl-2 pr-2">
                         <span>CPU</span>
                         <span>AMD</span>
                     </div>
-                    <h3 class="title-n2">AMD Ryzen 5 5600X</h3>
-                    <p class="products__item__descri">
+                    <h3 class="title-n2 pl-2 pr-2">AMD Ryzen 5 5600X</h3>
+                    <p class="products__item__descri pl-2 pr-2">
                         Procesador de 6 núcleos y 12 hilos con una velocidad...
                     </p>
+                    <div class="products__item__actions pl-2 pr-2">
+                        <div class="products__item__actions__box">
+                            <span class="products__item__actions__box--price">
+                                S/ 2400.00
+                            </span>
+                            <span class="products__item__actions__box--stock">
+                                15 en stock
+                            </span>
+                        </div>
+                        <a href="#" class="products__item__actions__btn">
+                            <i class="fa-solid fa-bolt"></i> Agregado
+                        </a>
+                    </div>
                 </article>
             </section>
         </div>

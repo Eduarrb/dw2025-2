@@ -1,7 +1,7 @@
 @use '../base/variables' as v;
 
 .filtros {
-    width: 30%;
+    width: calc(30% - 1.5rem);
     border: 1px solid rgba(v.$light-gray, .3);
     border-radius: 1rem;
     padding: 2rem;
@@ -26,7 +26,6 @@
             border-radius: 1rem;
         }
     }
-<<<<<<< HEAD
     &__form {
         &__box {
             background-color: v.$bg-secondary;
@@ -88,6 +87,4 @@
             cursor: pointer;
         }
     }
-=======
->>>>>>> 1a22be29510cbf67b90e283b7dbcdbc8d5178080
 }
