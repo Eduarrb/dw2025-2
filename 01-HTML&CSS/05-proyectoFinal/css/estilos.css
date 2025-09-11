@@ -30,6 +30,11 @@
 html {
   font-size: 62.5%;
 }
+@media only screen and (max-width: 26.25em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   background-color: #121B2D;
@@ -52,6 +57,22 @@ a, span {
 @media only screen and (max-width: 75em) {
   .contenedor {
     max-width: 96rem;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .contenedor {
+    max-width: 72rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .contenedor {
+    max-width: 54rem;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .contenedor {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
@@ -517,8 +538,49 @@ a, span {
   color: #7E8CA0;
   font-size: 1.2rem;
 }
+.nav__contenedor__iconMenuBox {
+  display: none;
+  color: #C7D2DD;
+  font-size: 1.8rem;
+  border: 0.1rem solid #475569;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 3;
+}
+@media only screen and (max-width: 62em) {
+  .nav__contenedor__iconMenuBox {
+    display: block;
+  }
+}
+.nav__contenedor__iconMenuBox:hover {
+  background-color: #C7D2DD;
+  color: #1D2739;
+  transition: all 0.3s;
+}
 .nav__contenedor__menu {
   display: flex;
+}
+@media only screen and (max-width: 62em) {
+  .nav__contenedor__menu {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    flex-direction: column;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3rem;
+    transition: all 0.3s;
+  }
+  .nav__contenedor__menu.active {
+    left: 0;
+    transition: all 0.3s;
+  }
 }
 .nav__contenedor__menu--link {
   color: #C7D2DD;
@@ -529,6 +591,11 @@ a, span {
   padding: 0.8rem 1.5rem;
   margin-right: 3rem;
   border-radius: 0.8rem;
+}
+@media only screen and (max-width: 62em) {
+  .nav__contenedor__menu--link {
+    font-size: 2.5rem;
+  }
 }
 .nav__contenedor__menu--link svg {
   width: 1.6rem;
@@ -573,6 +640,16 @@ a, span {
   color: #24CBEE;
   font-size: 6.2rem;
 }
+@media only screen and (max-width: 62em) {
+  .header__contenedor--title {
+    font-size: 4.2rem;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .header__contenedor--title {
+    font-size: 3.2rem;
+  }
+}
 .header__contenedor--descri {
   width: 70%;
   margin-left: auto;
@@ -580,6 +657,16 @@ a, span {
   color: #7E8CA0;
   font-size: 2.2rem;
   line-height: 3.2rem;
+}
+@media only screen and (max-width: 62em) {
+  .header__contenedor--descri {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .header__contenedor--descri {
+    font-size: 1.6rem;
+  }
 }
 
 .filtros {
@@ -591,6 +678,16 @@ a, span {
 @media only screen and (max-width: 75em) {
   .filtros {
     width: calc(40% - 1.5rem);
+  }
+}
+@media only screen and (max-width: 62em) {
+  .filtros {
+    width: calc(50% - 1.5rem);
+  }
+}
+@media only screen and (max-width: 48em) {
+  .filtros {
+    display: none;
   }
 }
 .filtros__head {
@@ -682,6 +779,16 @@ a, span {
     width: calc(60% - 1.5rem);
   }
 }
+@media only screen and (max-width: 62em) {
+  .products {
+    width: calc(50% - 1.5rem);
+  }
+}
+@media only screen and (max-width: 48em) {
+  .products {
+    width: 100%;
+  }
+}
 .products__item {
   width: calc(33.3333333333% - 1.3333333333rem);
   border: 1px solid #475569;
@@ -690,7 +797,22 @@ a, span {
 }
 @media only screen and (max-width: 75em) {
   .products__item {
-    width: calc(50% - 2rem);
+    width: calc(50% - 1rem);
+  }
+}
+@media only screen and (max-width: 62em) {
+  .products__item {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .products__item {
+    width: calc(50% - 1rem);
+  }
+}
+@media only screen and (max-width: 36em) {
+  .products__item {
+    width: 100%;
   }
 }
 .products__item__imgBox {
@@ -746,6 +868,29 @@ a, span {
 .products__item__actions__box--stock {
   color: #334155;
   font-size: 1.2rem;
+}
+
+.main__filtrosBtnBox {
+  font-size: 1.8rem;
+  color: #7E8CA0;
+  display: none;
+  align-items: center;
+  background-color: #334155;
+  border-radius: 0 2rem 2rem 0;
+  padding: 1rem 2rem 1rem 1rem;
+  cursor: pointer;
+}
+@media only screen and (max-width: 48em) {
+  .main__filtrosBtnBox {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+  }
+}
+.main__filtrosBtnBox svg {
+  width: 3rem;
+  color: #24CBEE;
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=estilos.css.map */
