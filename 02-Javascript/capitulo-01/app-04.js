@@ -21,7 +21,30 @@ const mixto = ["Hola", 100, true, [1,2,3,4,5]];
 
 // ciclo o loop
             // 5
-for (let contador = 0; contador < 5; contador++){
-    console.log(frutas[contador]);
+// for (let contador = 0; contador < 5; contador++){
+//     console.log(frutas[contador]);
+// }
+
+let plantilla = '';
+
+// console.log(plantilla);
+
+for(let c = 0; c < frutas.length; c++) {
+    // console.log(frutas[c]);
+    plantilla += `<p>${frutas[c]}</p>`;
+    // plantilla = plantilla + `<p>${frutas[c]}</p>`;
 }
 
+// console.log(plantilla);
+
+const datosDOM = document.querySelector('#datos');
+// datosDOM.innerHTML = plantilla;
+
+let plantilla2 = '';
+
+frutas.forEach(function(fruta){
+    plantilla2 += `<h1>${fruta}</h1>`;
+});
+
+console.log(plantilla2);
+datosDOM.innerHTML = plantilla2;
