@@ -25,10 +25,13 @@
 
 // Variables ES6
 // let apellido = "Gonzalez";
+const ciudad = 'Lima';
 // console.log(apellido);
 
 // apellido = 'Perez';
 // console.log(apellido);
+
+// apellido = 'Ramirez';
 
 // const ciudad = 'Lima';
 // console.log(ciudad);

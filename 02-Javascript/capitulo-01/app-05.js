@@ -10,7 +10,7 @@
 */
 
 function saludar() {
-    console.log('Hola y bienvenidos al cursode desarrollo web');
+    console.log('Hola y bienvenidos al curso de desarrollo web');
 }
 
 // saludar();
@@ -30,8 +30,16 @@ function sumar() {
 let nombre = "Peter"; // NOTA VARIABLES GLOBALES
 //let nombre = 'Carlos';
 
+// function x() {
+//     let nombre = 'Marco';
+// }
+
+// function y() {
+//     let nombre = 'Ana';
+// }
+
 function nombrar(){
-    nombre = "Tony";
+    // nombre = "Tony";
     console.log(nombre);
 }
 
