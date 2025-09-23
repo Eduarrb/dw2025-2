@@ -1,0 +1,22 @@
+{
+    "usuario1": {
+        "nombre": "Juan",
+        "edad": 30,
+        "correo": "juan@example.com"
+    },
+    "usuario2": {
+        "nombre": "María",
+        "edad": 25,
+        "correo": "maria@example.com"
+    },
+    "usuario3": {
+        "nombre": "Pedro",
+        "edad": 35,
+        "correo": "pedro@example.com"
+    },
+    "usuario4": {
+        "nombre": "Ana",
+        "edad": 28,
+        "correo": "ana@example.com"
+    }
+}
