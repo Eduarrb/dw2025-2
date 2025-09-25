@@ -29,6 +29,11 @@ function saludar(){
 // }
 
 // fetch('data/usuarios.json')
+
+// function()
+//  .function()
+//  .function()
+
 fetch('https://pokeapi.co/api/v2/pokemon/ditto')
     .then(
         async function(res) {
