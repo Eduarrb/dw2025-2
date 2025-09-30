@@ -4,6 +4,12 @@
     background-color: #1D2739;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    &.active {
+        position: fixed;
+        width: 100%;
+        z-index: 4;
+        top: 0;
+    }
     &__contenedor {
         display: flex;
         justify-content: space-between;

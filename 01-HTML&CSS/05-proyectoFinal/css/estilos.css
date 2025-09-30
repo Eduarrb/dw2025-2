@@ -133,6 +133,10 @@ a, span {
   color: #ffffff;
 }
 
+.graBgNaranja {
+  background-image: linear-gradient(to right, #eb8039, #f22d06);
+}
+
 .gap-1 {
   gap: 1rem;
 }
@@ -501,6 +505,12 @@ a, span {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.nav.active {
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  top: 0;
+}
 .nav__contenedor {
   display: flex;
   justify-content: space-between;
@@ -633,10 +643,11 @@ a, span {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-.header__contenedor {
-  text-align: center;
+.header.active {
+  margin-top: 6.2rem;
 }
 .header__contenedor--title {
+  text-align: center;
   color: #24CBEE;
   font-size: 6.2rem;
 }
@@ -651,6 +662,7 @@ a, span {
   }
 }
 .header__contenedor--descri {
+  text-align: center;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -667,6 +679,35 @@ a, span {
   .header__contenedor--descri {
     font-size: 1.6rem;
   }
+}
+.header__contenedor__nav--menu {
+  color: #7E8CA0;
+  font-size: 1.4rem;
+}
+.header__contenedor__nav--separador {
+  color: #7E8CA0;
+  font-size: 1.4rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+.header__contenedor__nav--categoria {
+  color: white;
+  font-size: 1.4rem;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+.header__contenedor__nav--producto {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.header__contenedor__back {
+  color: #C7D2DD;
+  font-size: 1.4rem;
+}
+.header__contenedor__back i {
+  margin-right: 1rem;
 }
 
 .filtros {

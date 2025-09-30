@@ -25,7 +25,8 @@
 
 // Variables ES6
 // let apellido = "Gonzalez";
-const ciudad = 'Lima';
+const año = 2024;
+const ciudad = 'Ñaña';
 // console.log(apellido);
 
 // apellido = 'Perez';

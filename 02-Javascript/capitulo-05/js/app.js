@@ -54,7 +54,7 @@ form.addEventListener('submit', async e => {
     `;
 
     pokeData.innerHTML = plantilla;
-    pokeImagen.innerHTML = `<img width="200" src="${pokemon.sprites.front_default}" alt="${pokemon.name}">`;
+    pokeImagen.innerHTML = `<img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">`;
     pokeNombre.textContent = pokemon.name;
     pokemonInput.value = '';
 });
