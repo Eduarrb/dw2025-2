@@ -19,6 +19,11 @@
     }
 }
 
+.title-n1 {
+    font-size: 3rem;
+    color: white;
+    font-weight: 600;
+}
 .title-n2 {
     font-size: 1.8rem;
     color: white;
@@ -33,10 +38,6 @@
     font-weight: 400;
 }
 
-.title-n3 {
-    font-size: 2.3rem;
-    color: white;
-}
 
 .d-flex {
     display: flex;
@@ -73,9 +74,24 @@
     background-color: v.$primary;
     color: #ffffff;
 }
-
+.tipo {
+    font-size: 1.4rem;
+    padding: .3rem 1rem;
+    border-radius: 1rem;
+    font-weight: 600;
+}
 .graBgNaranja {
+    color: white;
     background-image: linear-gradient(to right, #eb8039, #f22d06);
+}
+.graBgAmarillo {
+    color: white;
+    background-image: linear-gradient(to right, #EBAF09, #F87715);
+}
+
+.bgNormal {
+    color: v.$light-gray;
+    border: 1px solid v.$border-color;
 }
 
 .gap-1 {
