@@ -66,3 +66,34 @@ CREATE TABLE personajes (
     per_act_id INT UNSIGNED NOT NULL,
     per_nombre VARCHAR(100) NOT NULL
 )
+
+INSERT INTO personajes (per_peli_id, per_act_id, per_nombre) VALUES
+    (1, 1, "Dom Cobb"),
+    (1, 2, "Arthur"),
+    (1, 3, "Ariadne"),
+    (1, 4, "Eames"),
+    (2, 5, "Bruce Wayne / Batman"),
+    (2, 6, "Joker"),
+    (2, 7, "Harvey Dent / Two-Face"),
+    (2, 8, "Rachel Dawes"),
+    (3, 9, "Cooper"),
+    (3, 10, "Brand"),
+    (3, 11, "Murph"),
+    (3, 12, "Professor Brand"),
+    (4, 13, "Neo"),
+    (4, 14, "Morpheus"),
+    (4, 15, "Trinity"),
+    (4, 16, "Agent Smith"),
+    (5, 17, "Vincent Vega"),
+    (5, 18, "Jules Winnfield"),
+    (5, 19, "Mia Wallace"),
+    (5, 20, "Butch Coolidge")
+
+SELECT * FROM peliculas
+SELECT * FROM actores
+SELECT * FROM personajes
+
+SELECT * FROM peliculas, personajes WHERE peli_id = per_peli_id
+
+SELECT * FROM actores, personajes WHERE act_id = per_act_id
+
