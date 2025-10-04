@@ -919,6 +919,16 @@ a, span {
   padding: 15rem 2rem;
   background-image: linear-gradient(to bottom right, #1E293B 5%, #0F172A 95%);
 }
+@media only screen and (max-width: 62em) {
+  .producto__imgBox {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .producto__imgBox {
+    gap: 2rem;
+  }
+}
 .producto__imgBox--btn {
   background-color: #0C121B;
   font-size: 1.6rem;
@@ -933,6 +943,11 @@ a, span {
 }
 .producto__dataBox {
   width: calc(50% - 2.5rem);
+}
+@media only screen and (max-width: 62em) {
+  .producto__dataBox {
+    width: 100%;
+  }
 }
 .producto__dataBox__descri {
   font-size: 2rem;
@@ -1060,6 +1075,73 @@ a, span {
 }
 .producto__dataBox__box__envio p:nth-child(4) i {
   color: #FACC15;
+}
+
+.productoOverview__menu {
+  border: 1px solid #475569;
+  display: inline-block;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+}
+.productoOverview__menu--link {
+  font-size: 1.6rem;
+  color: #8E939C;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.3rem;
+}
+.productoOverview__menu--link.active {
+  background-color: #06B6D4;
+  color: black;
+}
+.productoOverview__box {
+  border: 1px solid #475569;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.productoOverview__box__specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  display: none;
+}
+@media only screen and (max-width: 48em) {
+  .productoOverview__box__specs {
+    grid-template-columns: 1fr;
+  }
+}
+.productoOverview__box__specs__item {
+  border: 1px solid #155E74;
+  border-radius: 1rem;
+  background-color: #1B384B;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+.productoOverview__box__specs__item__icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #175065;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #24CBEE;
+  font-size: 1.4rem;
+}
+.productoOverview__box__specs__item__data {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.productoOverview__box__specs__item__data--title {
+  font-size: 1.4rem;
+  color: #24CBEE;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.productoOverview__box__specs__item__data--text {
+  font-size: 1.4rem;
+  color: white;
 }
 
 .main__filtrosBtnBox {
