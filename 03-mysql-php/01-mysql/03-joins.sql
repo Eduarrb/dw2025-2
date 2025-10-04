@@ -49,4 +49,55 @@ SELECT
         INNER JOIN personajes b ON a.peli_id = b.per_peli_id
         INNER JOIN actores c ON b.per_act_id = c.act_id
 
+SELECT 
+    a.peli_id, 
+    a.peli_nombre, 
+    b.per_peli_id, 
+    b.per_nombre,
+    b.per_act_id, 
+    c.act_id,
+    CONCAT(c.act_nombres, ' ', c.act_apellidos) AS actor
+    FROM peliculas a
+        LEFT JOIN personajes b ON a.peli_id = b.per_peli_id
+        LEFT JOIN actores c ON b.per_act_id = c.act_id 
 
+-- SELECT peli_id, peli_nombre FROM peliculas
+
+-- SELECT 
+--     a.peli_id, 
+--     a.peli_nombre, 
+--     b.per_peli_id, 
+--     b.per_nombre,
+--     b.per_act_id
+--     FROM peliculas a
+--         LEFT JOIN personajes b ON a.peli_id = b.per_peli_id ORDER BY b.per_act_id
+
+CREATE TABLE directores (
+    dire_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    dire_nombres VARCHAR(100) NOT NULL,
+    dire_apellidos VARCHAR(100) NOT NULL
+)
+
+INSERT INTO directores (dire_nombres, dire_apellidos) VALUES
+    ("Anthony", "Russo"),
+    ("Joe", "Russo"),
+    ("Christopher", "Nolan"),
+    ("Lana", "Wachowski"),
+    ("Steven", "Spielberg"),    
+    ("James", "Cameron"),
+    ("Peter", "Jackson"),
+    ("Quentin", "Tarantino"),
+    ("Martin", "Scorsese")
+
+-- 👁️‍🗨️👁️‍🗨️👁️‍🗨️
+ALTER TABLE peliculas ADD column peli_dire_id INT UNSIGNED AFTER peli_id
+
+UPDATE peliculas SET peli_dire_id = 1 WHERE peli_id = 12
+UPDATE peliculas SET peli_dire_id = 3 WHERE peli_id = 1
+UPDATE peliculas SET peli_dire_id = 3 WHERE peli_id = 2
+UPDATE peliculas SET peli_dire_id = 3 WHERE peli_id = 3
+UPDATE peliculas SET peli_dire_id = 3 WHERE peli_id = 13
+UPDATE peliculas SET peli_dire_id = 4 WHERE peli_id = 4
+UPDATE peliculas SET peli_dire_id = 4 WHERE peli_id = 14
+
+SELECT * FROM peliculas a INNER JOIN directores b ON a.peli_dire_id = b.dire_id

@@ -38,7 +38,6 @@
     font-weight: 400;
 }
 
-
 .d-flex {
     display: flex;
     flex-wrap: wrap;
@@ -63,6 +62,8 @@
     font-size: 1.4rem;
     padding: 1rem;
     border-radius: .5rem;
+    border: none;
+    outline: 0;
 }
 
 .btn-verde {
@@ -71,7 +72,7 @@
 }
 
 .btn-celeste {
-    background-color: v.$primary;
+    background-image: linear-gradient(to right, v.$primary, v.$primary-dark);
     color: #ffffff;
 }
 .tipo {
@@ -92,6 +93,10 @@
 .bgNormal {
     color: v.$light-gray;
     border: 1px solid v.$border-color;
+}
+
+.w-100 {
+    width: 100%;
 }
 
 .gap-1 {

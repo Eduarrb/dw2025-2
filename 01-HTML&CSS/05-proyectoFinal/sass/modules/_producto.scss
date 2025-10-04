@@ -1,0 +1,173 @@
+@use '../base/variables' as v;
+
+.producto {
+    &__imgBox {
+        width: calc(50% - 2.5rem);
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        border: 1px solid rgba(v.$border-color, .6);
+        border-radius: 1rem;
+        padding: 15rem 2rem;
+        background-image: linear-gradient(to bottom right, #1E293B 5%, #0F172A 95%);
+        &--btn {
+            background-color: v.$bg-arrowButton;
+            font-size: 1.6rem;
+            color: v.$light-gray;
+            padding: 1.6rem;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+        &__box {
+            img {
+                width: 100%;
+                border-radius: 1rem;
+            }
+        }
+    }
+    &__dataBox {
+        width: calc(50% - 2.5rem);
+        &__descri {
+            font-size: 2rem;
+            color: v.$texto-opaco;
+        }
+        &__valoracion {
+            display: flex;
+            &--estrella {
+                i {
+                    color: v.$destacado;
+                    font-size: 1.6rem;
+                }
+            }
+            &--num {
+                font-size: 1.6rem;
+                color: v.$light-gray;
+                margin-left: 1rem;
+            }
+            &--separador {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                &::after {
+                    content: '';
+                    width: .4rem;
+                    height: .4rem;
+                    display: inline-block;
+                    border-radius: 50%;
+                    background-color: v.$texto-opaco;
+                }
+            }
+            &--canti {
+                color: v.$texto-opaco;
+                font-size: 1.6rem;
+            }
+        }
+        &__box {
+            border: 1px solid rgba(v.$border-color, .6);
+            border-radius: 1rem;
+            padding: 2rem;
+            &__top {
+                display: flex;
+                justify-content: space-between;
+                &__precio {
+                    &--oferta {
+                        font-size: 3.5rem;
+                        font-weight: 900;
+                        background: linear-gradient(to right, v.$primary, v.$primary-dark);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    &--real {
+                        font-size: 1.6rem;
+                        color: v.$texto-opaco;
+                        text-decoration: line-through;
+                        margin-left: .5rem;
+                    }
+                }
+                &__links {
+                    &--item {
+                        color: v.$texto-opaco;
+                        font-size: 1.2rem;;
+                    }
+                }
+            }
+            &__stock {
+                &--circle {
+                    width: 1rem;
+                    height: 1rem;
+                    background-color: v.$green;
+                    border-radius: 50%;
+                    margin-right: .5rem;
+                }
+                font-size: 1.6rem;
+                color: v.$green;
+            }
+            &__form {
+                display: flex;
+                gap: 1rem;
+                &__canti {
+                    border: 1px solid rgba(v.$border-color, .6);
+                    border-radius: .5rem;
+                    padding: .6rem 1.2rem;
+                    flex-grow: 1;
+                    span {
+                        font-size: 1.6rem;
+                        color: v.$light-gray;
+                        cursor: pointer;
+                    }
+                    input {
+                        color: v.$light-gray;
+                        background-color: transparent;
+                        font-size: 1.6rem;
+                        &::-webkit-inner-spin-button,
+                        &::-webkit-outer-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+                        text-align: center;
+                        border: none;
+                        outline: 0;
+                    }
+                }
+                button {
+                    width: calc(100% - 11.5rem);
+                }
+            }
+            &__envio {
+                p {
+                    color: v.$light-gray;
+                    font-size: 1.4rem;
+                    &:not(:last-child) {
+                        margin-bottom: 2rem;
+                    }
+                    i {
+                        margin-right: 1rem;
+                    }
+                    &:nth-child(1){
+                        i {
+                            color: v.$green;
+                        }
+                    }
+                    &:nth-child(2){
+                        i {
+                            color: v.$primary-dark;
+                        }
+                    }
+                    &:nth-child(3){
+                        i {
+                            color: v.$morado;
+                        }
+                    }
+                    &:nth-child(4){
+                        i {
+                            color: v.$yellow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
