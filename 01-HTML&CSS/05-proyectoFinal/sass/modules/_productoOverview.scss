@@ -80,15 +80,22 @@
                         margin-bottom: 1rem;
                     }
                     &__iconBox {
-                        display: flex;
+                        display: inline-flex;
+                        flex-direction: row-reverse;
                         align-items: center;
                         color: v.$texto-opaco;
                         font-size: 2.5rem;
                         cursor: pointer;
                         i{
+                            transition: all .2s;
                             &:not(:last-child) {
                                 margin-right: .5rem;
                             }
+                            &:hover,
+                            &:hover ~ i {
+                                color: #FBBF24;
+                            }
+                        
                         }
                     }
                     textarea {
@@ -107,4 +114,4 @@
             }
         }
     }
-}
+}   

@@ -46,6 +46,9 @@
 .align-start {
     align-items: flex-start;
 }
+.justify-content-between {
+    justify-content: space-between;
+}
 
 .destacado {
     background-color: v.$destacado;

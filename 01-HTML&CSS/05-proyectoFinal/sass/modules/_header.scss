@@ -33,6 +33,21 @@
                 font-size: 1.6rem;
             }
         }
+        &__titleBox {
+            h1 {
+                background: linear-gradient(to right, v.$primary, v.$primary-dark, v.$primary-dark );
+                -webkit-background-clip: text;
+                background-clip: text;
+                display: inline-block;
+                -webkit-text-fill-color: transparent;
+                font-weight: 900;
+            }
+            p {
+                color: v.$texto-opaco;
+                font-size: 1.6rem;
+                margin-top: .5rem;
+            }
+        }
         &__nav {
             &--menu {
                 color: v.$gray;
