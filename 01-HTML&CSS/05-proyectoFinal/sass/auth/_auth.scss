@@ -1,0 +1,64 @@
+@use '../base/variables' as v;
+
+.auth {
+    width: 40rem;
+    border: 1px solid v.$border-color;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 0 15px rgba(v.$light-gray, 0.3);
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        color: white;
+    }
+    &__descripcion {
+        text-align: center;
+        margin: 1rem 0 2rem 0;
+        font-size: 1.4rem;
+        color: v.$texto-opaco;
+    }
+    &__form {
+        &__group {
+            display: flex;
+            flex-direction: column;
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+            label {
+                font-size: 1.6rem;
+                color: v.$texto-opaco;
+                margin-bottom: .5rem;
+            }
+            input {
+                background-color: v.$border-color;
+                border: 1px solid v.$border-color;
+                border-radius: .5rem;
+                padding: 1rem;
+                outline: 0;
+                color: v.$light-gray;
+                &::placeholder{
+                    color: v.$light-gray;
+                }
+            }
+            &__error {
+                margin-top: .5rem;
+                font-size: 1.2rem;
+                color: v.$red;
+            }
+        }
+    }
+    &__link {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 1.4rem;
+        a{
+            color: v.$primary-dark;
+        }
+        span {
+            color: v.$light-gray;
+        };
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

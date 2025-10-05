@@ -83,12 +83,20 @@ a, span {
   flex-wrap: wrap;
 }
 
-.align-start {
-  align-items: flex-start;
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
 }
 
 .justify-content-between {
   justify-content: space-between;
+}
+
+.vheight {
+  height: 100vh;
 }
 
 .destacado {
@@ -108,6 +116,7 @@ a, span {
   border-radius: 0.5rem;
   border: none;
   outline: 0;
+  cursor: pointer;
 }
 
 .btn-verde {
@@ -1384,6 +1393,67 @@ a, span {
   width: 3rem;
   color: #24CBEE;
   margin-right: 1rem;
+}
+
+.auth {
+  width: 40rem;
+  border: 1px solid #475569;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 0 15px rgba(199, 210, 221, 0.3);
+}
+.auth h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+.auth__descripcion {
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+  font-size: 1.4rem;
+  color: #8E939C;
+}
+.auth__form__group {
+  display: flex;
+  flex-direction: column;
+}
+.auth__form__group:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.auth__form__group label {
+  font-size: 1.6rem;
+  color: #8E939C;
+  margin-bottom: 0.5rem;
+}
+.auth__form__group input {
+  background-color: #475569;
+  border: 1px solid #475569;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  outline: 0;
+  color: #C7D2DD;
+}
+.auth__form__group input::placeholder {
+  color: #C7D2DD;
+}
+.auth__form__group__error {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #e74c3c;
+}
+.auth__link {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.auth__link a {
+  color: #3A85F6;
+}
+.auth__link span {
+  color: #C7D2DD;
+}
+.auth__link:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=estilos.css.map */

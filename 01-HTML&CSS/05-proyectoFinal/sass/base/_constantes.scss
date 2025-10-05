@@ -43,11 +43,18 @@
     flex-wrap: wrap;
 }
 
-.align-start {
-    align-items: flex-start;
+.align-items-center {
+    align-items: center;
+}
+.justify-content-center {
+    justify-content: center;
 }
 .justify-content-between {
     justify-content: space-between;
+}
+
+.vheight{
+    height: 100vh;
 }
 
 .destacado {
@@ -67,6 +74,7 @@
     border-radius: .5rem;
     border: none;
     outline: 0;
+    cursor: pointer;
 }
 
 .btn-verde {
