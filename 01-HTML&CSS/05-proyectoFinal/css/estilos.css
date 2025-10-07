@@ -733,6 +733,11 @@ a, span {
 .header__contenedor__back i {
   margin-right: 1rem;
 }
+.header__contenedor.admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .filtros {
   width: calc(30% - 1.5rem);
@@ -1370,6 +1375,105 @@ a, span {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.admin__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+.admin__cards__item {
+  border: 1px solid #475569;
+  background-color: #1A2537;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.admin__cards__item__colData h4 {
+  color: #8E939C;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.admin__cards__item__colData p {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 0.8rem;
+}
+.admin__cards__item__colIcon {
+  font-size: 1.6rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admin__cards__item:nth-child(1) .admin__cards__item__colIcon {
+  background-color: #175065;
+  color: #24CBEE;
+}
+.admin__cards__item:nth-child(2) .admin__cards__item__colIcon {
+  background-color: #1D4540;
+  color: #22C55E;
+}
+.admin__cards__item:nth-child(3) .admin__cards__item__colIcon {
+  background-color: #462D3C;
+  color: #e74c3c;
+}
+.admin__cards__item:nth-child(4) .admin__cards__item__colIcon {
+  background-color: #464531;
+  color: #EBAD0A;
+}
+.admin__formBox {
+  border: 1px solid #475569;
+  background-color: #1A2537;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+}
+.admin__formBox h2 {
+  font-size: 2.8rem;
+  color: white;
+  margin-bottom: 3rem;
+}
+.admin__formBox__form__group {
+  display: flex;
+  flex-direction: column;
+}
+.admin__formBox__form__group label {
+  font-size: 1.6rem;
+  color: #C7D2DD;
+  margin-bottom: 1rem;
+}
+.admin__formBox__form__group input,
+.admin__formBox__form__group textarea,
+.admin__formBox__form__group select {
+  border: 1px solid #475569;
+  background-color: #334155;
+  font-size: 1.4rem;
+  outline: 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+.admin__formBox__form__group.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.admin__formBox__form__group.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.admin__formBox__form__group__item {
+  display: flex;
+  flex-direction: column;
+}
+.admin__formBox__form__group:not(:last-child) {
+  margin-bottom: 3rem;
 }
 
 .main__filtrosBtnBox {

@@ -1,0 +1,116 @@
+@use '../base/variables' as v;
+
+.admin {
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+        &__item {
+            border: 1px solid v.$border-color;
+            background-color: #1A2537;
+            padding: 2.5rem 2rem;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &__colData {
+                h4 {
+                    color: v.$texto-opaco;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                }
+                p {
+                    color: white;
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                    margin-top: .8rem;
+                }   
+            }
+            &__colIcon {
+                font-size: 1.6rem;
+                // background-color: peru;
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &:nth-child(1) {
+                .admin__cards__item__colIcon {
+                    background-color: v.$specBgicon;
+                    color: v.$primary;
+                }
+            }
+            &:nth-child(2) {
+                .admin__cards__item__colIcon {
+                    background-color: #1D4540;
+                    color: v.$green;
+                }
+            }
+            &:nth-child(3) {
+                .admin__cards__item__colIcon {
+                    background-color: #462D3C;
+                    color: v.$red;
+                }
+            }
+            &:nth-child(4) {
+                .admin__cards__item__colIcon {
+                    background-color: #464531;
+                    color: v.$destacado;
+                }
+            }
+        }
+    }
+    &__formBox {
+        border: 1px solid v.$border-color;
+        background-color: #1A2537;
+        padding: 2.5rem 2rem;
+        border-radius: 1rem;
+        h2 {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        &__form {
+            &__group {
+                display: flex;
+                flex-direction: column;
+                label {
+                    font-size: 1.6rem;
+                    color: v.$light-gray;
+                    margin-bottom: 1rem;
+
+                }
+                input,
+                textarea,
+                select {
+                    border: 1px solid v.$border-color;
+                    background-color: v.$bg-secondary;
+                    font-size: 1.4rem;
+                    outline: 0;
+                    padding: 1rem;
+                    border-radius: .5rem;
+                    color: white;
+                }
+                &.grid-2 {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 2rem;
+                }
+                &.grid-3 {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 2rem;
+                }
+                &__item {
+                    display: flex;
+                    flex-direction: column;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+}
