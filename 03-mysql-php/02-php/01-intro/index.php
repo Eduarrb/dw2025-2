@@ -10,35 +10,55 @@
 
     <pre>
         <?php
+
+            // php -S localhost:3000
             $nombre = "Juan";
             $num = 45.5;
     
-            $array = [1, 5453, "Hola", true, [30, 'Adiós']];
+            $array = [1, 5453, "Hola", false, 0];
 
-            // print_r($array);
+            // print_r($array[2]);
             // var_dump($array);
+
+
+            // ARRAY ASOCIATIVO
             $arrayAsso = [
+                // key - value pair
                 "nombre" => "Juan",
                 "edad" => 30,
                 "apellido" => "Pérez"
             ];
-            var_dump($arrayAsso);
-            echo $arrayAsso["nombre"];
+            // var_dump($arrayAsso);
+            // echo $arrayAsso["nombre"];
+
+            // FUNCIONES
+            function saludar ($assoc) {
+                return "Hola " . $assoc["nombre"];
+            }
+
+            $nombre2 = saludar($arrayAsso);
+            var_dump($nombre2);
+
+            if ($num<50) {
+                echo "El número es menor que 50";
+            } else {
+                echo "El número es mayor o igual que 50";
+            }
+
+
+            echo "<br>";
+            for ($i = 0; $i < count($array); $i++) {
+                echo $array[$i]."<br>";
+            }
         ?>
     </pre>
     <script>
-        let nombre = "Juan"
-        const edad = 30
-        console.log(nombre, edad);
-        const obj = {
-            nombre: "Juan",
-            edad: 30,
-            array: [1, 5453, "Hola", true, [30, 'Adiós']]
+        document.captureEvents()
+        "hola"+"mundo"
+        const celular = {
+            marca: "Samsung",
+            modelo: "A50"
         }
-        const saludar = () => {
-            console.log("Hola");
-        }
-        console.log(obj.nombre);
     </script>
 </body>
 </html>
