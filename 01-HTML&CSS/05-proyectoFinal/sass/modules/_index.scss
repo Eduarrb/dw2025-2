@@ -6,6 +6,7 @@
 @forward 'comentarios';
 @forward 'carrito';
 @forward 'admin';
+@forward 'productosLista';
 
 @use '../base/variables' as v;
 
