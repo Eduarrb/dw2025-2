@@ -1,3 +1,5 @@
+<?php include 'db.php'; ?>
+<?php ob_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,7 +19,7 @@
             <h4 class="text-center col-md-12">
                 Ingrese los datos de la película
             </h4>
-            <form class="col-md-6 mt-4">
+            <form class="col-md-6 mt-4" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre de la película</label>
                     <input 
@@ -40,19 +42,48 @@
                     <label for="restricciones">Restricciones</label>
                     <input type="text" class="form-control" id="restricciones" name="peli_restricciones" placeholder="Restricciones de la película">
                 </div>
+                <pre>
+                    <?php
+                        $query = "SELECT dire_id, CONCAT(dire_nombres, ' ', dire_apellidos) AS director FROM directores";
+                        $res = mysqli_query($conexion, $query);
+                    ?>
+                </pre>
                 <div class="form-group">
                     <label for="director">Selecciona al director</label>
                     <select name="peli_dire_id" id="director" class="form-control">
-                        <option value="">-- Seleccione --</option>
-                        <option value="1">Director 1</option>
-                        <option value="2">Director 2</option>
-                        <option value="3">Director 3</option>
+                        <option value="" disabled selected>-- Seleccione director --</option>
+                        <?php while($fila = mysqli_fetch_assoc($res)): ?>
+                            <option value="<?php echo $fila['dire_id']; ?>">
+                                <?php echo $fila['director']; ?>
+                            </option>
+                        <?php endwhile; ?>
                     </select>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Guardar Película" class="btn btn-primary">
+                    <input type="submit" value="Guardar Película" class="btn btn-primary" name="guardar">
                 </div>
             </form>
+            <pre>
+                <?php
+                    if(isset($_POST['guardar'])) {
+                        $peli_nombre = $_POST['peli_nombre'];
+                        $peli_genero = $_POST['peli_genero'];
+                        $peli_anio = $_POST['peli_anio'];
+                        $peli_restricciones = $_POST['peli_restricciones'];
+                        $peli_dire_id = $_POST['peli_dire_id'];
+
+                        $query = "INSERT INTO peliculas (peli_nombre, peli_genero, peli_anio, peli_restricciones, peli_dire_id) 
+                            VALUES ('$peli_nombre', '$peli_genero', '$peli_anio', '$peli_restricciones', $peli_dire_id)";
+                        
+                        $res = mysqli_query($conexion, $query);
+
+                        // var_dump($res);
+                        if($res) {
+                            header("Location: ./");
+                        }
+                    }
+                ?>
+            </pre>
         </div>
     </section>
 </body>
