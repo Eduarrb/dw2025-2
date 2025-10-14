@@ -1,0 +1,119 @@
+@use '../base/variables' as v;
+
+.carrito {
+    &__items {
+        width: calc(70% - 2.5rem);
+        &__producto {
+            border: 1px solid v.$border-color;
+            padding: 3rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            // gap: 2rem;
+            justify-content: space-between;
+            &__imgBox {
+                width: 8rem;
+                height: 8rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                }
+            }
+            &__info {
+                h3 {
+                    font-size: 2rem;
+                    color: white;
+                }
+                p {
+                    font-size: 1.4rem;
+                    color: v.$texto-opaco;
+                    margin: .5rem 0
+                }
+                span {
+                    font-size: 1.8rem;
+                    font-weight: 900;
+                    background: linear-gradient(to right, v.$primary, v.$primary-dark);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            &__cantidad {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                button {
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: .5rem;
+                    border: 1px solid v.$border-color;
+                    background-color: #334155;
+                    color: v.$light-gray;
+                    font-size: 1.8rem;
+                    cursor: pointer;
+                }
+                span {
+                    color: white;
+                    font-size: 1.6rem;
+                }
+            }
+            &__eliminar {
+                color: v.$red;
+                font-size: 2rem;
+            }
+            &__total {
+                font-size: 2rem;
+                color: white;
+                font-weight: 900;
+            }
+        }
+        &__alerta {
+            margin-top: 1rem;
+            span {
+                color: v.$red;
+                font-size: 1.4rem;
+            }
+        }
+    }
+    &__resumen {
+        width: calc(30% - 2.5rem);
+        border: 1px solid v.$border-color;
+        padding: 3rem;
+        border-radius: 1rem;
+        h2 {
+            font-size: 2.4rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        &__detalle {
+            &__subTotal {
+                color: v.$light-gray;
+                font-size: 1.8rem;
+            }
+            &__envio {
+                color: v.$light-gray;
+                font-size: 1.8rem;
+                span:nth-child(2) {
+                    color: v.$green;
+                }
+            }
+            hr {
+                border: 0;
+                border-top: 1px solid v.$border-color;
+            }
+            &__total {
+                font-size: 2rem;
+                font-weight: 900;
+                color: white;
+                span:nth-child(2) {
+                    background: linear-gradient(to right, v.$primary, v.$primary-dark);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+}

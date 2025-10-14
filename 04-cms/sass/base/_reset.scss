@@ -1,0 +1,37 @@
+@use 'variables' as v;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    // unidades de medidad va ser REM
+    font-size: 62.5%; // 10px
+    // 1rem = 10p
+    // 1.4rem = 14px
+    // 22.2rem = 222px
+    // 120rem
+    @media only screen and (max-width: v.$bp-extraSmall) {
+        font-size: 50%; // 8px
+    }
+}
+
+body {
+    background-color: #121B2D;
+    font-family: "Lato", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, span {
+    display: inline-block;
+}

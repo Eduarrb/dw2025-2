@@ -1,0 +1,83 @@
+@use '../base/variables' as v;
+
+.header {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    &.active {
+        margin-top: 6.2rem;
+    }
+    &__contenedor {
+        &--title {
+            text-align: center;
+            color: v.$primary;
+            font-size: 6.2rem;
+            @media only screen and (max-width: v.$bp-large) {
+                font-size: 4.2rem;
+            }
+            @media only screen and (max-width: v.$bp-small) {
+                font-size: 3.2rem;
+            }
+        }
+        &--descri {
+            text-align: center;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            color: v.$gray;
+            font-size: 2.2rem;
+            line-height: 3.2rem;
+            @media only screen and (max-width: v.$bp-large) {
+                font-size: 1.8rem;
+            }
+            @media only screen and (max-width: v.$bp-small) {
+                font-size: 1.6rem;
+            }
+        }
+        &__titleBox {
+            h1 {
+                background: linear-gradient(to right, v.$primary, v.$primary-dark, v.$primary-dark );
+                -webkit-background-clip: text;
+                background-clip: text;
+                display: inline-block;
+                -webkit-text-fill-color: transparent;
+                font-weight: 900;
+            }
+            p {
+                color: v.$texto-opaco;
+                font-size: 1.6rem;
+                margin-top: .5rem;
+            }
+            
+        }
+        &__nav {
+            &--menu {
+                color: v.$gray;
+                font-size: 1.4rem;
+            }
+            &--separador {
+                color: v.$gray;
+                font-size: 1.4rem;
+                margin-left: .8rem;
+                margin-right: .8rem;
+            }
+           
+            &--producto {
+                color: white;
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+        }
+        &__back {
+            color: v.$light-gray;
+            font-size: 1.4rem;
+            i {
+                margin-right: 1rem;
+            }
+        }
+        &.admin {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
