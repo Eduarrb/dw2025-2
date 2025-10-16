@@ -48,7 +48,7 @@
 </aside>
 <section class="products d-flex gap-2">
     <article class="products__item pb-2">
-        <a class="products__item__imgBox" href="producto.html">
+        <a class="products__item__imgBox" href="producto">
             <img src="img/amd.webp" alt="Amd">
             <span class="products__item__imgBox--destacado destacado">
                 <i class="fa-regular fa-star"></i> Destacado

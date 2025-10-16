@@ -3,22 +3,55 @@
 
     <?php include VIEW_LAYOUT . 'nav.php'; ?>
     
-    <header class="header">
-        <div class="header__contenedor contenedor">
-            <h1 class="header__contenedor--title mb-1">Componentes de PC Premium</h1>
-            <p class="header__contenedor--descri">
-                Encuentra los mejores componentes para armar la PC de tus sueños. Calidad y rendimiento garantizados.
-            </p>
-        </div>
-    </header>
+    <?php 
+        if($_SERVER['REQUEST_URI'] == "/") {
+            include VIEW_INDEX . 'header.php'; 
+        }
 
+        if($_SERVER['REQUEST_URI'] == "/producto") {
+            include VIEW_PRODUCTO . 'header.php';
+        }
+
+        if($_SERVER['REQUEST_URI'] == "/cart") {
+            include VIEW_CART . 'header.php';
+        }
+
+        if($_SERVER['REQUEST_URI'] == "/admin") {
+            include VIEW_ADMIN . 'header.php';
+        }
+    ?>
     <main class="main pb-5">
-        <?php include VIEW_INDEX . 'filterBtn.php'; ?>
-        
-        <div class="main__contenedor contenedor d-flex gap-3 align-start">
-            <?php include VIEW_INDEX . 'index.php'; ?>
+        <?php 
+            if($_SERVER['REQUEST_URI'] == "/") {
+                include VIEW_INDEX . 'filterBtn.php';
+            }
+        ?>
+        <div class="
+            <?php echo $_SERVER['REQUEST_URI'] == "/admin" ? "admin" : "main__contenedor"; ?> 
+            contenedor 
+            <?php echo $_SERVER['REQUEST_URI'] == "/" ? "d-flex gap-3 align-start" : ""; ?>
+        ">
+            <?php
+                // echo $_SERVER['REQUEST_URI'];
+                if($_SERVER['REQUEST_URI'] == "/") {
+                    include VIEW_INDEX . 'index.php';
+                }
+                if($_SERVER['REQUEST_URI'] == "/producto") {
+                    include VIEW_PRODUCTO . 'producto.php';
+                    include VIEW_PRODUCTO . 'overview.php';
+                    include VIEW_PRODUCTO . 'comentarios.php';
+                }
+                if($_SERVER['REQUEST_URI'] == "/cart") {
+                    include VIEW_CART . "cart.php";
+                }
+
+                if($_SERVER['REQUEST_URI'] == "/admin") {
+                    include VIEW_ADMIN . 'cards.php';
+                    include VIEW_ADMIN . 'formulario.php';
+                    include VIEW_ADMIN . 'productos.php';
+                }
+            ?>
         </div>
     </main>
-    <script src="js/app.js"></script>
-</body>
-</html>
+    <?php include VIEW_LAYOUT . 'footer.php'; ?>
+    
