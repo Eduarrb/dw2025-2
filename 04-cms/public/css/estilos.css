@@ -1139,26 +1139,38 @@ pre {
   color: #8E939C;
   padding: 0.5rem 1.5rem;
   border-radius: 0.3rem;
+  border: 1px solid transparent;
+}
+.productoOverview__menu--link:hover {
+  border: 1px solid #C7D2DD;
+  transition: all 0.3s;
 }
 .productoOverview__menu--link.active {
-  background-color: #06B6D4;
+  background-color: #24CBEE;
   color: black;
+  border: 1px solid #24CBEE !important;
 }
 .productoOverview__box {
   border: 1px solid #475569;
   padding: 2rem;
   border-radius: 1rem;
 }
+.productoOverview__box .item.active {
+  display: none;
+}
 .productoOverview__box__specs {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  display: none;
 }
 @media only screen and (max-width: 48em) {
   .productoOverview__box__specs {
     grid-template-columns: 1fr;
   }
+}
+.productoOverview__box__specs h3 {
+  grid-column: span 2;
+  margin-bottom: 2rem;
 }
 .productoOverview__box__specs__item {
   border: 1px solid #155E74;

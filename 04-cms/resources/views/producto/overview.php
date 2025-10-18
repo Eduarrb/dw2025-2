@@ -1,12 +1,10 @@
 <div class="productoOverview mt-6">
     <div class="productoOverview__menu">
-        <a href="#" class="productoOverview__menu--link active">Especificaciones</a>
-        <a href="#" class="productoOverview__menu--link">Reviews</a>
+        <a href="#" class="productoOverview__menu--link active" data-menu="specs">Especificaciones</a>
+        <a href="#" class="productoOverview__menu--link" data-menu="reviews">Reviews</a>
     </div>
     <div class="productoOverview__box mt-2">
-        <!-- Cometi un error al generar muchas cajas, voy a corregirlo -->
-        <!-- tambien debo corregir sus titulos -->
-        <div class="productoOverview__box__specs mt-2">
+        <div class="productoOverview__box__specs mt-2 item" data-block="specs">
             <h3 class="title-n3">
                 <span class="tipo graBgNaranja">SPECS</span> Procesador Especificaciones
             </h3>
@@ -38,7 +36,7 @@
                 </div>
             </article>
         </div>
-        <div class="productoOverview__box__reviews">
+        <div class="productoOverview__box__reviews item active" data-block="reviews">
             <h3 class="title-n3">
                 Deja un comentario sobre el producto
             </h3>

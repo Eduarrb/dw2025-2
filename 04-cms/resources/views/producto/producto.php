@@ -69,4 +69,3 @@
         </div>
     </div>
 </div>
-<script src="js/dashProducto.js"></script>

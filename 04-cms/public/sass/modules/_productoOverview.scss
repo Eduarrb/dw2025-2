@@ -11,9 +11,15 @@
             color: v.$texto-opaco;
             padding: .5rem 1.5rem;
             border-radius: .3rem;
+            border: 1px solid transparent;
+            &:hover {
+                border: 1px solid v.$light-gray;
+                transition: all .3s;
+            }
             &.active {
-                background-color: #06B6D4;
+                background-color: v.$primary;
                 color: black;
+                border: 1px solid v.$primary !important;
             }
         }
     }
@@ -21,15 +27,21 @@
         border: 1px solid v.$border-color;
         padding: 2rem;
         border-radius: 1rem;
+        .item {
+            &.active {
+                display: none;
+            }
+        }
         &__specs {
-            // voy a usar CSS grid
-            // DIRECCION https://cssgridgarden.com/#es
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
-            display: none;
             @media only screen and (max-width: v.$bp-medium) {
                 grid-template-columns: 1fr;
+            }
+            h3 {
+                grid-column: span 2;
+                margin-bottom: 2rem;
             }
             &__item {
                 border: 1px solid v.$specBorder;
