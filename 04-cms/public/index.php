@@ -32,7 +32,6 @@
             <?php echo $_SERVER['REQUEST_URI'] == "/" ? "d-flex gap-3 align-start" : ""; ?>
         ">
             <?php
-                // echo $_SERVER['REQUEST_URI'];
                 if($_SERVER['REQUEST_URI'] == "/") {
                     include VIEW_INDEX . 'index.php';
                 }
