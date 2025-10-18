@@ -97,3 +97,5 @@
         </tbody>
     </table>
 </div>
+
+<script src="js/admin.js"></script>

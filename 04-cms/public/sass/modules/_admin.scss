@@ -67,6 +67,10 @@
         background-color: #1A2537;
         padding: 2.5rem 2rem;
         border-radius: 1rem;
+        display: none;
+        &.active {
+            display: block;
+        }
         h2 {
             font-size: 2.8rem;
             color: white;

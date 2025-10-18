@@ -60,7 +60,7 @@
                 <div class="productoOverview__box__reviews__form__group">
                     <label for="review">Tu comentario</label>
                     <textarea name="review" id="review" rows="5" placeholder="Escribe tu comentario aqui..."></textarea>
-                    <span>0 / 500</span>
+                    <span class="charCanti">0 / 500</span>
                 </div>
                 <div class="productoOverview__box__reviews__form__group">
                     <button type="submit" class="btn btn-celeste">

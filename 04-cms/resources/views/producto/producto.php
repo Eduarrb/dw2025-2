@@ -53,9 +53,9 @@
             </div>
             <form class="producto__dataBox__box__form mt-2">
                 <div class="producto__dataBox__box__form__canti">
-                    <span>-</span>
+                    <span class="producto__dataBox__box__form__canti--restar">-</span>
                     <input type="number" value="1" min="1" max="25" />
-                    <span>+</span>
+                    <span class="producto__dataBox__box__form__canti--sumar">+</span>
                 </div>
                 <button class="btn btn-celeste"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 <!-- <button><i class="fa-solid fa-check"></i> Agregado al carrito</button> -->
@@ -69,3 +69,4 @@
         </div>
     </div>
 </div>
+<script src="js/dashProducto.js"></script>

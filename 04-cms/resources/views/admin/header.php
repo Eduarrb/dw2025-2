@@ -4,7 +4,7 @@
             <h1 class="title-n1">Admin Dashboard</h1>
             <p>Manjea tu inventario</p>
         </div>
-        <a href="index.html" class="btn btn-celeste">
+        <a href="#" class="btn btn-celeste">
             <i class="fa-solid fa-plus"></i> Agregar producto
         </a>
     </div>
