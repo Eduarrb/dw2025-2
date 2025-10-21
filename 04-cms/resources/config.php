@@ -8,6 +8,7 @@
     defined("VIEW_PRODUCTO") ? null : define("VIEW_PRODUCTO", __DIR__ . DS . "views" . DS . "producto" . DS);
     defined("VIEW_CART") ? null : define("VIEW_CART", __DIR__ . DS . "views" . DS . "cart" . DS);
     defined("VIEW_ADMIN") ? null : define("VIEW_ADMIN", __DIR__ . DS . "views" . DS . "admin" . DS);
+    defined("VIEW_AUTH") ? null : define("VIEW_AUTH", __DIR__ . DS . "views" . DS . "auth" . DS);
 
     $db = conectarDB();
 

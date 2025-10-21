@@ -36,3 +36,12 @@ INSERT INTO productos (nombre, marca, descripcion, categoria_id, precio, stock, 
     ("Ryzen 5 5600X", "AMD", "Procesador de 6 núcleos y 12 hilos con una frecuencia base de 3.7 GHz y un boost de hasta 4.6 GHz.", 1, 199.99, 5, "01.webp", 1, 1),
     ("GeForce RTX 3060", "NVIDIA", "Tarjeta gráfica con arquitectura Ampere, 12GB de memoria GDDR6 y soporte para Ray Tracing.", 2, 329.99, 3, "02.webp", 1, 1)
     
+CREATE TABLE usuarios (
+    id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nombres VARCHAR(50) NOT NULL,
+    apellidos VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    rol VARCHAR(20) NOT NULL,
+    estado TINYINT(1) NOT NULL
+)
