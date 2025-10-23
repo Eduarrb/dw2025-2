@@ -43,5 +43,9 @@ CREATE TABLE usuarios (
     email VARCHAR(50) NOT NULL,
     password VARCHAR(255) NOT NULL,
     rol VARCHAR(20) NOT NULL,
-    estado TINYINT(1) NOT NULL
+    estado TINYINT(1) NOT NULL,
+    token VARCHAR(50) NOT NULL
 )
+
+INSERT INTO usuarios (nombres, apellidos, email, password, rol, estado) VALUES
+    ("John", "Doe", "admin@gmail.com", "123456", "admin", 1)

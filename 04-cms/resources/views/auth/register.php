@@ -1,4 +1,8 @@
 <h1>Crear Cuenta</h1>
+<?php if(get_mensaje() == 'registro'): ?>
+    <script src="../js/auth.js"></script>
+<?php unset($_SESSION['mensaje']); ?>
+<?php endif; ?>
 <?php $res = postValidarRegistro(); ?>
 <form class="auth__form mt-3" method="POST">
     <div class="auth__form__group">
@@ -10,26 +14,30 @@
     </div>
     <div class="auth__form__group">
         <label for="apellidos">Apellidos</label>
-        <input type="text" id="apellidos" name="apellidos" />
+        <input type="text" id="apellidos" name="apellidos" value="<?php getDato($res, 1, 'apellidos'); ?>" />
         <span class="auth__form__group__error">
+            <?php getDato($res, 0, 'apellidos'); ?>
         </span>
     </div>
     <div class="auth__form__group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" />
+        <input type="email" id="email" name="email" value="<?php getDato($res, 1, 'email'); ?>" />
         <span class="auth__form__group__error">
+            <?php getDato($res, 0, 'email'); ?>
         </span>
     </div>
     <div class="auth__form__group">
         <label for="password">Contraseña</label>
         <input type="password" id="password" name="password" />
         <span class="auth__form__group__error">
+            <?php getDato($res, 0, 'password'); ?>
         </span>
     </div>
     <div class="auth__form__group">
         <label for="passwordConfirm">Confirma tu Contraseña</label>
         <input type="password" id="passwordConfirm" name="passwordConfirm" />
         <span class="auth__form__group__error">
+            <?php getDato($res, 0, 'passwordConfirm'); ?>
         </span>
     </div>
     <div class="auth__form__group mt-3">

@@ -26,4 +26,30 @@
             echo '';
         }
     }
+
+    function validar_correo($email) {
+        $query = query("SELECT * FROM usuarios WHERE email = '$email'");
+        if(mysqli_num_rows($query) > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    function redirect($url) {
+        header("Location: $url");
+    }
+
+    function set_mensaje($msj) {
+        if(!empty($msj)){
+            $_SESSION['mensaje'] = $msj;
+        } else {
+            $msj = "";
+        }
+    }
+
+    function get_mensaje(){
+        if(isset($_SESSION['mensaje'])){
+            return $_SESSION['mensaje'];
+        }
+    }
 ?>
