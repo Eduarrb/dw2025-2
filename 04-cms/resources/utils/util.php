@@ -47,9 +47,16 @@
         }
     }
 
-    function get_mensaje(){
-        if(isset($_SESSION['mensaje'])){
-            return $_SESSION['mensaje'];
+    // function get_mensaje(){
+    //     if(isset($_SESSION['mensaje'])){
+    //         return $_SESSION['mensaje'];
+    //     }
+    // }
+
+    function showSwalMensaje() {
+        if(isset($_SESSION['mensaje'])) {
+            echo "<script src='../js/{$_SESSION['mensaje']}.js'></script>";
+            unset($_SESSION['mensaje']);
         }
     }
 ?>

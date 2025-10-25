@@ -1,8 +1,7 @@
 <h1>Crear Cuenta</h1>
-<?php if(get_mensaje() == 'registro'): ?>
-    <script src="../js/auth.js"></script>
-<?php unset($_SESSION['mensaje']); ?>
-<?php endif; ?>
+
+<?php showSwalMensaje(); ?>
+
 <?php $res = postValidarRegistro(); ?>
 <form class="auth__form mt-3" method="POST">
     <div class="auth__form__group">
@@ -41,7 +40,7 @@
         </span>
     </div>
     <div class="auth__form__group mt-3">
-        <button type="submit" class="btn btn-celeste w-100">Iniciar Sesión</button>
+        <button type="submit" class="btn btn-celeste w-100">Registra tu cuenta</button>
     </div>
 </form>
 <div class="auth__link">

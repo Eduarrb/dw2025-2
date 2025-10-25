@@ -15,6 +15,8 @@
 
     $db = conectarDB();
 
+    require __DIR__ . '/../public/vendor/autoload.php';
+
     require_once "utils/util.php";
     
     require_once "caller.php";

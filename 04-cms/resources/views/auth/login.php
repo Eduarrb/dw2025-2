@@ -1,4 +1,7 @@
 <h1>Iniciar Sesión</h1>
+
+<?php showSwalMensaje(); ?>
+
 <form class="auth__form mt-3">
     <div class="auth__form__group">
         <label for="email">Email</label>
