@@ -47,16 +47,30 @@
         }
     }
 
-    // function get_mensaje(){
-    //     if(isset($_SESSION['mensaje'])){
-    //         return $_SESSION['mensaje'];
-    //     }
-    // }
-
-    function showSwalMensaje() {
-        if(isset($_SESSION['mensaje'])) {
-            echo "<script src='../js/{$_SESSION['mensaje']}.js'></script>";
-            unset($_SESSION['mensaje']);
+    function setSwal($titulo, $texto, $icon) {
+        if(!empty($titulo)){
+            $_SESSION['titulo'] = $titulo;
+            $_SESSION['texto'] = $texto;
+            $_SESSION['icon'] = $icon;
+        } else {
+            $titulo = "";
+            $texto = "";
+            $icon = "";
         }
     }
+
+    function showSwalMensaje() {
+        if(isset($_SESSION['titulo'])) {
+            $titulo = $_SESSION['titulo'];
+            $texto = $_SESSION['texto'];
+            $icon = $_SESSION['icon'];
+            $script = <<<DELIMITADOR
+                <script>
+                    showSwal("$titulo", "$texto", "$icon");
+                </script>
+DELIMITADOR;
+            echo $script;
+            unset($_SESSION['titulo'], $_SESSION['texto'], $_SESSION['icon'] );
+        }
+    }    
 ?>

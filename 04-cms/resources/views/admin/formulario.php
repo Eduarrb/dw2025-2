@@ -1,45 +1,47 @@
 <div class="admin__formBox mt-3">
     <h2>Agregar nuevo producto</h2>
-    <form class="admin__formBox__form">
+    <?php showSwalMensaje(); ?>
+    <?php post_addProducto(); ?>
+    <form class="admin__formBox__form" method="post">
         <div class="admin__formBox__form__group grid-2">
             <div class="admin__formBox__form__group__item">
-                <label for="">Nombre Producto</label>
-                <input type="text" />
+                <label for="nombre">Nombre Producto</label>
+                <input type="text" name="nombre" id="nombre" />
             </div>
             <div class="admin__formBox__form__group__item">
-                <label for="">Marca</label>
-                <input type="text" />
+                <label for="marca">Marca</label>
+                <input type="text" name="marca" id="marca" />
             </div>
         </div>
         <div class="admin__formBox__form__group">
-            <label for="">Descripción</label>
-            <textarea name="" id="" cols="30" rows="5"></textarea>
+            <label for="descripcion">Descripción</label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="5"></textarea>
         </div>
         <div class="admin__formBox__form__group grid-3">
             <div class="admin__formBox__form__group__item">
-                <label for="">Categoria</label>
-                <select name="" id="">
-                    <option value="">Procesador</option>
-                    <option value="">Procesador</option>
+                <label for="categoria">Categoria</label>
+                <select name="categoria" id="categoria">
+                    <option value="" selected disabled>- Selecciona una categoria -</option>
+                    <?php get_categorias(); ?>
                 </select>
             </div>
             <div class="admin__formBox__form__group__item">
-                <label for="">Precio</label>
-                <input type="number" />
+                <label for="precio">Precio</label>
+                <input type="number" name="precio" id="precio" />
             </div>
             <div class="admin__formBox__form__group__item">
-                <label for="">Cantidad</label>
-                <input type="number" />
+                <label for="stock">Cantidad</label>
+                <input type="number" name="stock" id="stock" />
             </div>
         </div>
         <div class="admin__formBox__form__group">
-            <label for="">Subir imagen</label>
-            <input type="file" />
+            <label for="imagen">Subir imagen</label>
+            <input type="file" name="imagen" id="imagen" />
         </div>
         <div class="admin__formBox__form__group">
             <div class="admin__formBox__form__group__itemCheckbox">
-                <input type="checkbox" name="" id="" class="mr-1">
-                <label for="">Destacado</label>
+                <input type="checkbox" name="destacado" id="destacado" class="mr-1">
+                <label for="destacado">Destacado</label>
             </div>
         </div>
         <div class="admin__formBox__form__group">

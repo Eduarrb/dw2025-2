@@ -2,15 +2,22 @@
 
 <?php showSwalMensaje(); ?>
 
-<form class="auth__form mt-3">
+<?php $res = validarUserLogin(); ?>
+
+<form class="auth__form mt-3" method="post">
     <div class="auth__form__group">
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="tu@email.com"/>
-        <span class="auth__form__group__error">Por favor ingresa un email válido</span>
+        <input type="email" id="email" name="email" value="<?php getDato($res, 1, 'email'); ?>" />
+        <span class="auth__form__group__error">
+            <?php getDato($res, 0, 'email'); ?>
+        </span>
     </div>
     <div class="auth__form__group">
         <label for="password">Contraseña</label>
-        <input type="password" id="password" placeholder="********" />
+        <input type="password" id="password" name="password" />
+        <span class="auth__form__group__error">
+            <?php getDato($res, 0, 'password'); ?>
+        </span>
     </div>
     <div class="auth__form__group mt-3">
         <button type="submit" class="btn btn-celeste w-100">Iniciar Sesión</button>

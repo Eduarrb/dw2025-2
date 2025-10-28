@@ -1,3 +1,12 @@
+<?php
+    if(!isset($_SESSION['rol'])) {
+        redirect('./');
+    }
+    if($_SESSION['rol'] !== 'admin') {
+        redirect("./");
+    }
+?>
+
 <header class="header">
     <div class="header__contenedor contenedor admin">
         <div class="header__contenedor__titleBox">

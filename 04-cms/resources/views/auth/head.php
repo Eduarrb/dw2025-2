@@ -12,6 +12,7 @@
 			referrerpolicy="no-referrer"
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="../js/swal.js"></script>
 		<link rel="stylesheet" href="../css/estilos.css" />
 	</head>
 	<body class="d-flex justify-content-center align-items-center vheight">

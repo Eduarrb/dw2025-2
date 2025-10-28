@@ -7,7 +7,7 @@
         if($_SERVER['REQUEST_URI'] == "/") {
             include VIEW_INDEX . 'header.php'; 
         }
-
+        // dd($_SESSION);
         if($_SERVER['REQUEST_URI'] == "/producto") {
             include VIEW_PRODUCTO . 'header.php';
         }

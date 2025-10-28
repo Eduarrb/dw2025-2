@@ -79,4 +79,60 @@
             }
         }
     }
+
+    function validarUserLogin() {
+        $errores = [];
+        $data = [];
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $email = escape($_POST['email']);
+            $password = escape($_POST['password']);
+
+            if(strlen($email) <= 0) {
+                $errores['email'] = "El campo email no debe estar vacio";
+            }
+            if(strlen($password) <= 0) {
+                $errores['password'] = 'La contraseña no debe estar vacia';
+            }
+
+            if(!empty($errores)) {
+                $data['email'] = $email;
+                return [$errores, $data];
+            }
+            else {
+                if(post_loginUser($email, $password)) {
+                    redirect("../");
+                }
+                else {
+                    setSwal('Error', 'El usuario o contraseña son incorrectos', 'error');
+                    redirect('/auth/login');
+                }
+            }
+        }
+    }
+
+    function post_loginUser($email, $pass) {
+        $query = query("SELECT * FROM usuarios WHERE email = '$email' AND estado = 1");
+        if(mysqli_num_rows($query) == 1) {
+            $user = arrayAssoc($query);
+            $id = $user['id'];
+            $nombres = $user['nombres'];
+            $apellidos = $user['apellidos'];
+            $password = $user['password'];
+            $rol = $user['rol'];
+
+            if(password_verify($pass, $password)){
+                $_SESSION['id'] = $id;
+                $_SESSION['nombres'] = $nombres;
+                $_SESSION['apellidos'] = $apellidos;
+                $_SESSION['rol'] = $rol;
+
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 ?>
