@@ -4,10 +4,12 @@
     <?php include VIEW_LAYOUT . 'nav.php'; ?>
     
     <?php 
+
+        $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
         if($_SERVER['REQUEST_URI'] == "/") {
             include VIEW_INDEX . 'header.php'; 
         }
-        // dd($_SESSION);
         if($_SERVER['REQUEST_URI'] == "/producto") {
             include VIEW_PRODUCTO . 'header.php';
         }
@@ -16,7 +18,7 @@
             include VIEW_CART . 'header.php';
         }
 
-        if($_SERVER['REQUEST_URI'] == "/admin") {
+        if($url == "/admin") {
             include VIEW_ADMIN . 'header.php';
         }
     ?>
@@ -44,7 +46,7 @@
                     include VIEW_CART . "cart.php";
                 }
 
-                if($_SERVER['REQUEST_URI'] == "/admin") {
+                if($url == "/admin") {
                     include VIEW_ADMIN . 'cards.php';
                     include VIEW_ADMIN . 'formulario.php';
                     include VIEW_ADMIN . 'productos.php';

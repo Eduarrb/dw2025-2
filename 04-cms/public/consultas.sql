@@ -18,6 +18,8 @@ INSERT INTO categorias (nombre, estado) VALUES
     ("cooling", 1),
     ("case", 1)
 
+DROP TABLE productos
+
 CREATE TABLE productos (
     id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
@@ -26,7 +28,7 @@ CREATE TABLE productos (
     categoria_id INT UNSIGNED NOT NULL,
     precio DECIMAL(10,2) NOT NULL,
     stock INT UNSIGNED NOT NULL,
-    imagen VARCHAR(20) NOT NULL,
+    imagen VARCHAR(50) NOT NULL,
     destacado TINYINT(1) NOT NULL,
     estado TINYINT(1) NOT NULL,
     FOREIGN KEY (categoria_id) REFERENCES categorias(id) ON DELETE CASCADE ON UPDATE CASCADE

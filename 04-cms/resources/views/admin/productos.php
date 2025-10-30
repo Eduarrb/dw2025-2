@@ -25,75 +25,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="prodImg">
-                    <div class="prodImg__box">
-                        <img src="img/amd.jpg" alt="AMD Ryzen 5 5600X" />
-                    </div>
-                    <div class="prodImg__data">
-                        <span>AMD Ryzen 5 5600X</span>
-                        <span>AMD</span>
-                    </div>
-                </td>
-                <td>
-                    <span class="tipo graBgNaranja">
-                        CPU
-                    </span>
-                </td>
-                <td class="precio">$199.99</td>
-                <td class="cantidad">25</td>
-                <td>En Stock</td>
-                <td class="accionesTd">
-                    <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="#"><i class="fa-solid fa-trash-can"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td class="prodImg">
-                    <div class="prodImg__box">
-                        <img src="img/amd.jpg" alt="AMD Ryzen 5 5600X" />
-                    </div>
-                    <div class="prodImg__data">
-                        <span>AMD Ryzen 5 5600X</span>
-                        <span>AMD</span>
-                    </div>
-                </td>
-                <td>
-                    <span class="tipo graBgNaranja">
-                        CPU
-                    </span>
-                </td>
-                <td class="precio">$199.99</td>
-                <td class="cantidad">25</td>
-                <td>En Stock</td>
-                <td class="accionesTd">
-                    <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="#"><i class="fa-solid fa-trash-can"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td class="prodImg">
-                    <div class="prodImg__box">
-                        <img src="img/amd.jpg" alt="AMD Ryzen 5 5600X" />
-                    </div>
-                    <div class="prodImg__data">
-                        <span>AMD Ryzen 5 5600X</span>
-                        <span>AMD</span>
-                    </div>
-                </td>
-                <td>
-                    <span class="tipo graBgNaranja">
-                        CPU
-                    </span>
-                </td>
-                <td class="precio">$199.99</td>
-                <td class="cantidad">25</td>
-                <td>En Stock</td>
-                <td class="accionesTd">
-                    <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="#"><i class="fa-solid fa-trash-can"></i></a>
-                </td>
-            </tr>
+            <?php get_productosAdmin(); ?>
         </tbody>
     </table>
 </div>
