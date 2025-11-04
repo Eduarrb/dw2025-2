@@ -28,6 +28,7 @@
             <?php get_productosAdmin(); ?>
         </tbody>
     </table>
+    <?php post_productoDelete(); ?>
 </div>
 
 <script src="js/admin.js"></script>

@@ -51,3 +51,11 @@ CREATE TABLE usuarios (
 
 INSERT INTO usuarios (nombres, apellidos, email, password, rol, estado) VALUES
     ("John", "Doe", "admin@gmail.com", "123456", "admin", 1)
+
+CREATE TABLE carrito (
+    user_id INT UNSIGNED NOT NULL,
+    producto_id INT UNSIGNED NOT NULL,
+    cantidad INT UNSIGNED NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES usuarios(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (producto_id) REFERENCES productos(id) ON DELETE CASCADE ON UPDATE CASCADE
+)

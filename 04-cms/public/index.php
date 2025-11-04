@@ -10,7 +10,7 @@
         if($_SERVER['REQUEST_URI'] == "/") {
             include VIEW_INDEX . 'header.php'; 
         }
-        if($_SERVER['REQUEST_URI'] == "/producto") {
+        if($url == "/producto") {
             include VIEW_PRODUCTO . 'header.php';
         }
 
@@ -37,7 +37,7 @@
                 if($_SERVER['REQUEST_URI'] == "/") {
                     include VIEW_INDEX . 'index.php';
                 }
-                if($_SERVER['REQUEST_URI'] == "/producto") {
+                if($url == "/producto") {
                     include VIEW_PRODUCTO . 'producto.php';
                     include VIEW_PRODUCTO . 'overview.php';
                     include VIEW_PRODUCTO . 'comentarios.php';

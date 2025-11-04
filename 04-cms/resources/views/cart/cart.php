@@ -1,3 +1,4 @@
+<?php showSwalMensaje(); ?>
 <div class="carrito d-flex gap-5">
     <div class="carrito__items">
         <article class="carrito__items__producto">

@@ -2,8 +2,8 @@
     <h2>Agregar nuevo producto</h2>
     <?php showSwalMensaje(); ?>
     <?php post_addProducto(); ?>
-    <?php $res = get_editProducto(); ?>
-    <?php post_editProducto(); ?>
+    <?php $res = get_Producto($_GET['edit'] ?? 0); ?>
+    <?php post_editProducto($_GET['edit'] ?? '', $res['imagen'] ?? ''); ?>
     <form class="admin__formBox__form" method="post" enctype="multipart/form-data">
         <div class="admin__formBox__form__group grid-2">
             <div class="admin__formBox__form__group__item">
@@ -24,7 +24,7 @@
                 <label for="categoria">Categoria</label>
                 <select name="categoria" id="categoria">
                     <option value="" selected disabled>- Selecciona una categoria -</option>
-                    <?php get_categorias(); ?>
+                    <?php get_categorias($res['categoria_id']); ?>
                 </select>
             </div>
             <div class="admin__formBox__form__group__item">

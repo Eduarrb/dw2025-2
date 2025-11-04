@@ -14,7 +14,7 @@ DELIMITADOR;
 
             $producto = <<<DELIMITER
                 <article class="products__item pb-2">
-                    <a class="products__item__imgBox" href="producto">
+                    <a class="products__item__imgBox" href="producto?id={$row['producto_id']}">
                         <img src="img/productos/{$row['imagen']}" alt="{$row['producto_nombre']}">
                         {$destacado}
                     </a>
@@ -35,7 +35,7 @@ DELIMITADOR;
                                 {$row['stock']} en stock
                             </span>
                         </div>
-                        <a href="producto" class="products__item__actions__btn btn btn-celeste">
+                        <a href="producto?id={$row['producto_id']}" class="products__item__actions__btn btn btn-celeste">
                             <i class="fa-solid fa-cart-shopping"></i> Agregar
                         </a>
                     </div>
