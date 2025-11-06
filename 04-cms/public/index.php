@@ -14,7 +14,7 @@
             include VIEW_PRODUCTO . 'header.php';
         }
 
-        if($_SERVER['REQUEST_URI'] == "/cart") {
+        if($url == "/cart") {
             include VIEW_CART . 'header.php';
         }
 
@@ -42,7 +42,7 @@
                     include VIEW_PRODUCTO . 'overview.php';
                     include VIEW_PRODUCTO . 'comentarios.php';
                 }
-                if($_SERVER['REQUEST_URI'] == "/cart") {
+                if($url == "/cart") {
                     include VIEW_CART . "cart.php";
                 }
 
