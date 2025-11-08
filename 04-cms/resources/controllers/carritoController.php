@@ -100,4 +100,23 @@ DELIMITADOR;
             
         }
     }
+
+    use MercadoPago\MercadoPagoConfig;
+    MercadoPagoConfig::setAccessToken("token aqui");
+    use MercadoPago\Client\Preference\PreferenceClient;
+
+    function addCheckout(){
+        $client = new PreferenceClient();
+        $preference = $client->create([
+            "items"=> array(
+                array(
+                    "title" => "Mi producto",
+                    "quantity" => 1,
+                    "unit_price" => 2000
+                )
+            )
+        ]);
+
+        dd($preference);
+    }
 ?>
