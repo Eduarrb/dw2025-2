@@ -1,6 +1,16 @@
 @use '../base/variables' as v;
 
 .carrito {
+    .no-items {
+        text-align: center;
+        color: v.$light-gray;
+        width: 100%;
+        font-size: 2rem;
+        border: 1px solid v.$border-color;
+        border-radius: 1rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
     &__items {
         width: calc(70% - 2.5rem);
         &__producto {

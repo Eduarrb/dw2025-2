@@ -2,6 +2,11 @@
     ob_start();
     session_start();
     
+    require __DIR__ . '/../public/vendor/autoload.php';
+
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+    
     require_once "db.php";
     
     defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
@@ -15,7 +20,7 @@
 
     $db = conectarDB();
 
-    require __DIR__ . '/../public/vendor/autoload.php';
+    
 
     require_once "utils/util.php";
     

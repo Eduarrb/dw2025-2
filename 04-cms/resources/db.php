@@ -1,8 +1,8 @@
 <?php
-    defined('DB_HOST') ? null : define('DB_HOST', 'localhost');
-    defined('DB_NAME') ? null : define('DB_NAME', 'pcmaster');
-    defined('DB_USER') ? null : define('DB_USER', 'root');
-    defined('DB_PASS') ? null : define('DB_PASS', 'web12345678');
+    define("DB_HOST", $_ENV['DB_HOST']);
+    define("DB_NAME", $_ENV['DB_NAME']);
+    define("DB_USER", $_ENV['DB_USER']);
+    define("DB_PASS", $_ENV['DB_PASS']);
 
     function conectarDB() {
         $db = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);

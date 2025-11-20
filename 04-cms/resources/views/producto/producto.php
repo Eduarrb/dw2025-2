@@ -49,7 +49,6 @@
                     <span class="producto__dataBox__box__top__precio--oferta">
                         S/ <?php echo $producto['precio']; ?>
                     </span>
-                    <!-- <span class="producto__dataBox__box__top__precio--real">$899.99</span> -->
                 </div>
                 <div class="producto__dataBox__box__top__links">
                     <a href="#" class="producto__dataBox__box__top__links--item mr-2">
@@ -71,10 +70,18 @@
                     <input type="number" value="1" min="1" max="<?php echo $producto['stock']; ?>" name="cantidad" />
                     <span class="producto__dataBox__box__form__canti--sumar">+</span>
                 </div>
-                <button class="btn btn-celeste"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
-                <!-- <button><i class="fa-solid fa-check"></i> Agregado al carrito</button> -->
+                <?php if(!isset($_SESSION['id'])): ?>
+                    <a href="auth/login" class="btn btn-yellow"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</a>
+                <?php else: ?>
+                    <button class="btn btn-celeste"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                <?php endif; ?>
             </form>
-            <?php post_productoCarritoAdd($_SESSION['id'], $producto['id']); ?>
+
+            <?php 
+                if(isset($_SESSION['id'])) {
+                    post_productoCarritoAdd($_SESSION['id'], $producto['id']); 
+                }
+            ?>
             <div class="producto__dataBox__box__envio mt-3">
                 <p><i class="fa-solid fa-truck"></i> Envio gratis</p>
                 <p><i class="fa-solid fa-rotate-left"></i> Política devolución 30 dias</p>

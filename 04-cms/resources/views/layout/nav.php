@@ -38,25 +38,26 @@
             <?php endif; ?>
         </div>
         <div class="nav__contenedor__user">
-            <div class="nav__contenedor__user__userData mr-2">
-                <?php if(isset($_SESSION['nombres'])): ?>
+            <?php if(isset($_SESSION['nombres'])): ?>
+                <div class="nav__contenedor__user__userData mr-2">
                     <span>
                         <?php echo $_SESSION['nombres'] . " " . $_SESSION['apellidos']; ?>
                     </span>
                     <span>
                         <?php echo $_SESSION['rol']; ?>
                     </span>
-                <?php else: ?>
-                    <span>
-                        Invitado
-                    </span>
-                <?php endif; ?>
-            </div>
-            <div class="nav__contenedor__user__sesion">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
-                </svg>
-            </div>
+                </div>
+                 <a href="auth/logout.php" class="nav__contenedor__user__sesion">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                    </svg>
+                </a>
+            <?php else: ?>
+                <div class="nav__contenedor__user__auth mr-2">
+                    <a href="auth/login" class="btn btn-celeste mr-1">Login</a>
+                    <a href="auth/register" class="btn btn-verde">registrate</a>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </nav>

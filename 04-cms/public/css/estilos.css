@@ -130,12 +130,17 @@ pre {
 }
 
 .btn-verde {
-  background-color: #196541;
+  background: linear-gradient(to right, #196541, #22C55E);
   color: #ffffff;
 }
 
 .btn-celeste {
   background-image: linear-gradient(to right, #24CBEE, #3A85F6);
+  color: #ffffff;
+}
+
+.btn-yellow {
+  background-image: linear-gradient(135deg, #EBAD0A, #FACC15);
   color: #ffffff;
 }
 
@@ -1106,7 +1111,8 @@ pre {
   border: none;
   outline: 0;
 }
-.producto__dataBox__box__form button {
+.producto__dataBox__box__form button, .producto__dataBox__box__form a {
+  text-align: center;
   width: calc(100% - 11.5rem);
 }
 .producto__dataBox__box__envio p {
@@ -1307,6 +1313,16 @@ pre {
   color: #C7D2DD;
 }
 
+.carrito .no-items {
+  text-align: center;
+  color: #C7D2DD;
+  width: 100%;
+  font-size: 2rem;
+  border: 1px solid #475569;
+  border-radius: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 .carrito__items {
   width: calc(70% - 2.5rem);
 }

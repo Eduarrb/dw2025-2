@@ -83,12 +83,16 @@
 }
 
 .btn-verde {
-    background-color: v.$light-green;
+    background: linear-gradient(to right, v.$light-green, v.$green);
     color: #ffffff;
 }
 
 .btn-celeste {
     background-image: linear-gradient(to right, v.$primary, v.$primary-dark);
+    color: #ffffff;
+}
+.btn-yellow {
+    background-image: linear-gradient(135deg, v.$destacado, v.$yellow);
     color: #ffffff;
 }
 .tipo {

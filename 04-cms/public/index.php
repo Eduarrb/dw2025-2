@@ -51,6 +51,9 @@
                     include VIEW_ADMIN . 'formulario.php';
                     include VIEW_ADMIN . 'productos.php';
                 }
+                if($url == "/success") {
+                    include VIEW_CART . 'checkout.php';
+                }
             ?>
         </div>
     </main>

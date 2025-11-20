@@ -103,9 +103,19 @@ DELIMITADOR;
 
     use MercadoPago\MercadoPagoConfig;
     use MercadoPago\Client\Preference\PreferenceClient;
-    MercadoPagoConfig::setAccessToken("");
+    MercadoPagoConfig::setAccessToken($_ENV['mpAccessToken']);
 
     function addCheoutOut() {
+        $query = query("SELECT * FROM carrito WHERE user_id = {$_SESSION['id']}");
+        $canti = 0;
+        $total = 0;
+        while($row = arrayAssoc($query)){
+            $canti += $row['cantidad'];
+            $prodQuery = query("SELECT * FROM productos WHERE id = {$row['producto_id']}");
+            $precio = arrayAssoc($prodQuery)['precio'];
+            $total += $precio * $row['cantidad'];
+        }
+
         $client = new PreferenceClient();
         $preference = $client->create([
             "back_urls" => array(
@@ -116,12 +126,42 @@ DELIMITADOR;
             "auto_return" => "all",
             "items"=> array(
                 array(
-                    "title" => "Mi producto",
+                    "title" => "Mi pedido",
                     "quantity" => 1,
-                    "unit_price" => 20
+                    "unit_price" => $total
                 )
             ),
         ]);
+        $_SESSION['preference_id'] = $preference->id;
+        $_SESSION['total'] = $total;
         return $preference->id;
     }
+
+    function successCheckout() {
+        $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        if($url == "/success") {
+            if(!isset($_SESSION['id'])) {
+                redirect("/");
+            }
+            if($_SESSION['preference_id'] == $_GET['preference_id']) {
+                query("INSERT INTO pedidos (user_id, total, fecha, estado) VALUES ({$_SESSION['id']}, {$_SESSION['total']}, NOW(), 'success')");
+                global $db;
+                $id_pedido = mysqli_insert_id($db);
+
+                $carritoQuery = query("SELECT a.producto_id, a.cantidad, b.precio FROM carrito a INNER JOIN productos b ON a.producto_id = b.id WHERE a.user_id = {$_SESSION['id']}");
+
+                while($row = arrayAssoc($carritoQuery)){
+                    query("INSERT INTO detalle_pedidos (pedido_id, producto_id, cantidad, precio_unitario) VALUES ($id_pedido, {$row['producto_id']}, {$row['cantidad']}, {$row['precio']})");
+                }
+
+                query("DELETE FROM carrito WHERE user_id = {$_SESSION['id']}");
+                setSwal('Compra Exitosa', 'Tu compra se ha realizado con éxito', 'success');
+                redirect("/");
+
+            } else {
+                redirect("/");
+            }
+        }
+    }
+
 ?>

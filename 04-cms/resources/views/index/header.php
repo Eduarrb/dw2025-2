@@ -1,3 +1,4 @@
+<?php showSwalMensaje(); ?>
 <header class="header">
     <div class="header__contenedor contenedor">
         <h1 class="header__contenedor--title mb-1">Componentes de PC Premium</h1>
