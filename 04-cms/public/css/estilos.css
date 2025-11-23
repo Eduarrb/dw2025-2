@@ -1245,6 +1245,9 @@ pre {
 .productoOverview__box__reviews__form__group__iconBox i:hover, .productoOverview__box__reviews__form__group__iconBox i:hover ~ i {
   color: #FBBF24;
 }
+.productoOverview__box__reviews__form__group__iconBox i.active {
+  color: #FBBF24;
+}
 .productoOverview__box__reviews__form__group textarea {
   background-color: #334155;
   border: 1px solid #475569;

@@ -107,7 +107,9 @@
                             &:hover ~ i {
                                 color: #FBBF24;
                             }
-                        
+                            &.active {
+                                color: #FBBF24;
+                            }
                         }
                     }
                     textarea {

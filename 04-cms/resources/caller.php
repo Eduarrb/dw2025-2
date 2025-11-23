@@ -5,4 +5,5 @@
     require_once "controllers/categoriasController.php";
     require_once "controllers/productosController.php";
     require_once "controllers/carritoController.php";
+    require_once "controllers/reviewsController.php";
 ?>

@@ -1,6 +1,6 @@
 <?php
     function post_productoCarritoAdd($userId, $productoId) {
-        if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if(isset($_POST['carritoAdd'])) {
             $cantidad = escape($_POST['cantidad']);
             $query = query("SELECT * FROM carrito WHERE user_id = $userId AND producto_id = $productoId");
 

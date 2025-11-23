@@ -1,7 +1,7 @@
 <header class="header">
     <div class="header__contenedor contenedor">
         <div class="header__contenedor__nav">
-            <a href="index.html" class="header__contenedor__nav--menu">Tienda</a>
+            <a href="./" class="header__contenedor__nav--menu">Tienda</a>
             <span class="header__contenedor__nav--separador">/</span>
             <a href="#" class="header__contenedor__nav--categoria graBgNaranja tipo">CPU</a>
             <span class="header__contenedor__nav--separador">/</span>

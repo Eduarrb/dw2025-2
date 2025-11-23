@@ -73,7 +73,7 @@
                 <?php if(!isset($_SESSION['id'])): ?>
                     <a href="auth/login" class="btn btn-yellow"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</a>
                 <?php else: ?>
-                    <button class="btn btn-celeste"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+                    <button class="btn btn-celeste" type="submit" name="carritoAdd"><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
                 <?php endif; ?>
             </form>
 

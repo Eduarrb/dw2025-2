@@ -32,3 +32,65 @@ prodOverMenuLinks.forEach((link) => {
 		e.target.classList.add('active');
 	});
 });
+
+const obtenerJson = async () => {
+	try {
+		const id = window.location.search.split('=')[1];
+		const res = await axios.get('api/apiCaller.php', {
+			params: {
+				action: 'getComentarios',
+				idProducto: id
+			}
+		});
+		return res.data;
+		
+	} catch (error) {
+		console.log(error)
+	}
+}
+
+const comentariosBox = document.querySelector('.comentarios__listBox');
+
+const renderComentarios = async () => {
+	const data = await obtenerJson();
+	let plantilla = '';
+	data.forEach(comentario => {
+		const fechaMoment = moment(comentario.fecha).locale('es');
+
+		let estrellas = '';
+		for (let i = 0; i < comentario.calificacion; i++) {
+			estrellas += '<i class="fa-solid fa-star"></i>';
+		}
+
+		if(comentario.calificacion != 5) {
+			for (let j = 0; j < 5 - comentario.calificacion; j++) {
+				estrellas += '<i class="fa-regular fa-star"></i>';
+			}
+		}
+
+		plantilla += `
+			<article class="comentarios__listBox__item">
+				<div class="comentarios__listBox__item__top">
+					<div class="comentarios__listBox__item__top__user">
+						<div class="comentarios__listBox__item__top__user__img">
+							<img src="img/clientes/01.jpg" alt="Eduardo Arroyo">
+						</div>
+						<div class="comentarios__listBox__item__top__user__data">
+							<span class="comentarios__listBox__item__top__user__data--name">${comentario.nombres} ${comentario.apellidos}</span>
+							<span class="comentarios__listBox__item__top__user__data--date">${fechaMoment.fromNow()}</span>
+						</div>
+					</div>
+					<div class="comentarios__listBox__item__top__valoracion">
+						${estrellas}
+					</div>
+				</div>
+				<div class="comentarios__listBox__item__comentario mt-2">
+					<p>${comentario.comentario}</p>
+				</div>
+			</article>
+		`;
+	})
+	comentariosBox.innerHTML = plantilla;
+}
+
+renderComentarios()

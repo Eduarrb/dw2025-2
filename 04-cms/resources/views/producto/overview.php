@@ -40,7 +40,7 @@
             <h3 class="title-n3">
                 Deja un comentario sobre el producto
             </h3>
-            <form class="productoOverview__box__reviews__form mt-2">
+            <form class="productoOverview__box__reviews__form mt-2" method="post">
                 <div class="productoOverview__box__reviews__form__group">
                     <label for="review">Tu puntuacion</label>
                     <div class="productoOverview__box__reviews__form__group__iconBox">
@@ -49,11 +49,8 @@
                         <i class="fa-regular fa-star"></i>
                         <i class="fa-regular fa-star"></i>
                         <i class="fa-regular fa-star"></i>
-                        <!-- con javascript necesitamos hacer el funcionamiento de todas maneras necesitamos capturar el valor -->
                     </div>
-                    <input type="hidden" value="0">
-                    <!-- este input tipo hidden me ayudara a capturar el valor de las estrellas por eso esta escondido -->
-                    <!-- no voy a poner un resumen -->
+                    <input type="hidden" value="0" class="ratingValue" name="ratingValue">
                 </div>
                 <div class="productoOverview__box__reviews__form__group">
                     <label for="review">Tu comentario</label>
@@ -61,12 +58,12 @@
                     <span class="charCanti">0 / 500</span>
                 </div>
                 <div class="productoOverview__box__reviews__form__group">
-                    <button type="submit" class="btn btn-celeste">
+                    <button type="submit" class="btn btn-celeste" name="reviewAdd">
                         <i class="fa-solid fa-paper-plane"></i> Enviar comentario
                     </button>
                 </div>
             </form>
-            
+            <?php post_addReview(); ?>
         </div>
     </div>
 </div>
