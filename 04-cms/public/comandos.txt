@@ -83,6 +83,8 @@ jobs:
 
 </VirtualHost>
 
+systemctl reload apache2
+
 --------------------------------------------------------------
 Instalacion de certificado ssl
 ------------------------------
