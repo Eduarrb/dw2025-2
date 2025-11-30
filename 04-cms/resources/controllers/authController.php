@@ -50,7 +50,7 @@
         $password = password_hash($password, PASSWORD_BCRYPT, array('cost' => 13));
         $res = query("INSERT INTO usuarios (nombres, apellidos, email, password, rol, estado, token) VALUES ('$nombres', '$apellidos', '$email', '$password', 'cliente', 0, '$token')");
         $msj = "Por favor activa tu cuenta accediendo al siguiente <a href='http://localhost:3000/auth/activate.php?email=$email&token=$token'>LINK</a>";
-        sendEmail($email, 'Activar Cuenta', $msj);
+        sendEmail($email, 'Activación de cuenta', $msj, $nombres.' '.$apellidos);
         if($res) {
             set_mensaje('registerOk');
             redirect("/auth/register");
