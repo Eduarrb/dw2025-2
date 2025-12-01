@@ -6,4 +6,6 @@
     require_once "controllers/productosController.php";
     require_once "controllers/carritoController.php";
     require_once "controllers/reviewsController.php";
+    require_once "controllers/mailtrapSenderController.php";
+
 ?>

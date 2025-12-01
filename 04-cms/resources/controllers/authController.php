@@ -48,11 +48,11 @@
     function post_registroUsuario($nombres, $apellidos, $email, $password) {
         $token = md5($email);
         $password = password_hash($password, PASSWORD_BCRYPT, array('cost' => 13));
-        $res = query("INSERT INTO usuarios (nombres, apellidos, email, password, rol, estado, token) VALUES ('$nombres', '$apellidos', '$email', '$password', 'cliente', 0, '$token')");
+        query("INSERT INTO usuarios (nombres, apellidos, email, password, rol, estado, token) VALUES ('$nombres', '$apellidos', '$email', '$password', 'cliente', 0, '$token')");
         $msj = "Por favor activa tu cuenta accediendo al siguiente <a href='http://localhost:3000/auth/activate.php?email=$email&token=$token'>LINK</a>";
-        sendEmail($email, 'Activación de cuenta', $msj, $nombres.' '.$apellidos);
+        $res = mailtrapSender($email, 'Activación de cuenta', $msj, $nombres.' '.$apellidos);
         if($res) {
-            set_mensaje('registerOk');
+            setSwal('Registro exitoso', 'Por favor revisa tu correo para activar tu cuenta', 'success');
             redirect("/auth/register");
         }
     }
